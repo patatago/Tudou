@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/test_tcpserver.cc.o -c /root/Tudou/test_tcpserver.cc",
+  "file": "/root/Tudou/test_tcpserver.cc"
+},
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/event.cc.o -c /root/Tudou/event.cc",
+  "file": "/root/Tudou/event.cc"
+},
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/util.cc.o -c /root/Tudou/util.cc",
+  "file": "/root/Tudou/util.cc"
+},
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/channel.cc.o -c /root/Tudou/channel.cc",
+  "file": "/root/Tudou/channel.cc"
+}
+]

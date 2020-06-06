@@ -1,0 +1,1 @@
+/usr/bin/g++  -g -std=c++11 -lpthread -g   CMakeFiles/Tudou.dir/test_tcpserver.cc.o CMakeFiles/Tudou.dir/event.cc.o CMakeFiles/Tudou.dir/util.cc.o CMakeFiles/Tudou.dir/channel.cc.o  -o Tudou 
