@@ -1,8 +1,8 @@
 [
 {
   "directory": "/root/Tudou/build",
-  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/test_tcpserver.cc.o -c /root/Tudou/test_tcpserver.cc",
-  "file": "/root/Tudou/test_tcpserver.cc"
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o -c /root/Tudou/tests/test_tcpserver.cc",
+  "file": "/root/Tudou/tests/test_tcpserver.cc"
 },
 {
   "directory": "/root/Tudou/build",
@@ -18,5 +18,20 @@
   "directory": "/root/Tudou/build",
   "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/channel.cc.o -c /root/Tudou/channel.cc",
   "file": "/root/Tudou/channel.cc"
+},
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/timer.cc.o -c /root/Tudou/timer.cc",
+  "file": "/root/Tudou/timer.cc"
+},
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/eventlooppool.cc.o -c /root/Tudou/eventlooppool.cc",
+  "file": "/root/Tudou/eventlooppool.cc"
+},
+{
+  "directory": "/root/Tudou/build",
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/tcpconnection.cc.o -c /root/Tudou/tcpconnection.cc",
+  "file": "/root/Tudou/tcpconnection.cc"
 }
 ]

@@ -6,7 +6,10 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Tudou/channel.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/channel.cc.o"
   "/root/Tudou/event.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/event.cc.o"
-  "/root/Tudou/test_tcpserver.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/test_tcpserver.cc.o"
+  "/root/Tudou/eventlooppool.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/eventlooppool.cc.o"
+  "/root/Tudou/tcpconnection.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/tcpconnection.cc.o"
+  "/root/Tudou/tests/test_tcpserver.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o"
+  "/root/Tudou/timer.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/timer.cc.o"
   "/root/Tudou/util.cc" "/root/Tudou/build/CMakeFiles/Tudou.dir/util.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

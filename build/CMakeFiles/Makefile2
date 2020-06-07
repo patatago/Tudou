@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /root/Tudou/build
 CMakeFiles/Tudou.dir/all:
 	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/depend
 	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Tudou/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target Tudou"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/root/Tudou/build/CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target Tudou"
 .PHONY : CMakeFiles/Tudou.dir/all
 
 # Include target in all.
@@ -81,7 +81,7 @@ all: CMakeFiles/Tudou.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Tudou.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /root/Tudou/build/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /root/Tudou/build/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Tudou.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /root/Tudou/build/CMakeFiles 0
 .PHONY : CMakeFiles/Tudou.dir/rule
