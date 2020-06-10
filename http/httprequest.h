@@ -1,16 +1,18 @@
 #ifndef __HTTP_message_H__
 #define __HTTP_message_H__
-
+#include <mutex>
 #include <string>
 #include <map>
 #include <unistd.h>
 #include <sys/types.h>
+#include <signal.h>
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <sstream>
 #include <iostream>
 #include <sys/mman.h>
 #include <utility>
+#include "../tcpconnection.h"
 #include "../buffer.h"
 using std::map;
 using std::string;
@@ -144,14 +146,15 @@ public:
 	
 	bool parseRequestLine(int len, Buffer &buffer)
 	{
-		string _message_line = buffer.read(len+2); //读出请求行
+		
+		string _message_line = buffer.read(len - buffer.getReadPos() + 2); //读出请求行
+		//std::cout << "_message: " << _message_line << std::endl; 
 		auto pos1 = _message_line.find(' ');
 		_message.setMethod(&_message_line[0], pos1); //请求方法
 		++pos1; //路径
 		auto pos2 = _message_line.find(' ', pos1); //找下一个空格
-		std::cout << "url" << std::endl;
 		parseUrl(string(&_message_line[pos1], pos2-pos1));	//路径
-		std::cout << "url_end" << std::endl;
+	
 		//开始解析http版本
 		if(!equal(&_message_line[pos2+1], &_message_line[pos2 + 7], "HTTP/1."))
 		{
@@ -174,7 +177,8 @@ public:
 	
 	bool parseRequestHead(int len, Buffer &buffer)
 	{
-		string _message_line = buffer.read(len+2); //读出请求头
+		string _message_line = buffer.read(len - buffer.getReadPos() + 2); //读出请求头
+		//std::cout << "_messagehttp: " << _message_line << std::endl; 
 		auto pos = _message_line.find(':'); //找到：
 		
 		if(pos == string::npos)
@@ -191,28 +195,26 @@ public:
 		bool flag;
 		int findPos = -1;
 		stringstream ss;
+
 		while(true)
 		{
 			if(_state == PARSE_REQUESTLINE) //从请求行开始解析
 			{
-				std::cout << "line1" << std::endl;
-				std::cout << "line2" << std::endl;
-				findPos = buffer.find("\r\n"); //找到"\r\n"
-				std::cout << "pos = " << findPos << std::endl;
+				findPos = buffer.find(); //找到"\r\n"
+		
 				if(findPos == -1)
 				{
 					return false; //解析失败
 				}
 				
 				flag = parseRequestLine(findPos, buffer);
-				std::cout << "line_end" << std::endl;
 				if(flag)
 				{
 					_state = PARSE_HEAD; //读请求头
 				}
 				else
 				{
-					break; //不是http请求
+					return false;
 				}
 				
 
@@ -220,8 +222,7 @@ public:
 			}
 			else if(_state == PARSE_HEAD) //请求头处理
 			{
-				std::cout << "head" << std::endl;
-				findPos = buffer.find(HttpStr);
+				findPos = buffer.find();
 				if(findPos == -1)
 				{
 					return false; //解析失败
@@ -235,18 +236,19 @@ public:
 			}
 			else if(_state == PARSE_BODY)
 			{
-				std::cout << "body" << std::endl;
-				findPos = buffer.find(HttpStr);
+				findPos = buffer.find();
 				if(findPos == -1)
 				{
+					//std::cout << "read size :" << buffer.size() << std::endl;
 					return false; //解析失败
 				}
-
-				_message.setBody(string(buffer.begin(), findPos));
-				buffer.consume(findPos + 2);
+				// auto pos = buffer.find();
+				// string _message_line = buffer.read(pos - buffer.getReadPos() + 2); //读出请求头
+				// _message.setBody(_message_line);
 				break;	
 			}
 		}
+		//std::cout << "read size :" << buffer.size() << std::endl;
 		return true;
 	}
 	
@@ -321,13 +323,19 @@ public:
 		aa << "Content-type: text/html\r\n";
 		
 		aa << "Content-length: " << ss.str().size() << "\r\n\r\n";
-		
+		//std::cout << aa.str()<<ss.str() <<std::endl;
+		//ptr->send(aa.str());
+		//ptr->send(ss.str());
 		_buffer.append(aa.str());
 		_buffer.append(ss.str());
+		std::cout << aa.str() << ss.str() << std::endl;
 	}
 	
 	void append()
 	{
+		unique_lock<mutex> mtx(_mutex);
+		char buf[1024] = {};
+		int nread = 0;
 		if(_message._method != (HttpMessage::POST || HttpMessage::GET))
 		{
 			clientError(_message.getFilename(), "501", "Not Implemented", "Tudou cannot implement this method");
@@ -362,15 +370,28 @@ public:
 		}
 		ss << "Content-type: " << _filetype << "\r\n";
 		ss << "Content-length: " << sbuf.st_size << "\r\n\r\n";
-		
-		int srcfd = open(_message.getFilename().c_str(), O_RDONLY, 0777); 
-    	char *srcp = (char *)mmap(0, sbuf.st_size, PROT_READ, MAP_PRIVATE, srcfd, 0);
-    	close(srcfd);
 		_buffer.append(ss.str());
-		_buffer.append(string(srcp, sbuf.st_size) + "\r\n\r\n");
-		munmap(srcp, sbuf.st_size);
+
+		int srcfd = open(_message.getFilename().c_str(), O_RDONLY, 0777); 
+		auto len = sbuf.st_size;
+		while(len)
+		{
+			nread = ::read(srcfd, buf, 1024);
+			_buffer.append(buf, nread);
+			len -= nread;
+		}
+    	close(srcfd);
+		//::write(ptr->getChannel()->getFd(), ss.str().c_str(), ss.str().size());
+		//ptr->send(ss.str());
+		//ptr->send(srcp, sbuf.st_size);
+		//::write(ptr->getChannel()->getFd(), srcp, sbuf.st_size);
+		//ptr->send("\r\n\r\n");
+		//
+		//_buffer.append(string(srcp, sbuf.st_size) + "\r\n\r\n");
  	}
 	
+
+
 	HttpResponse(HttpMessage &message, const string &str, Buffer &buffer)
 	: _message(message)
 	, _message_return(str)
@@ -383,6 +404,7 @@ private:
 	HttpState _state; //响应状态码
 	string _message_return; //返回信息
 	string _filetype;
+	mutex _mutex;
 	Buffer &_buffer;
 };
 

@@ -13,6 +13,44 @@ CMakeFiles/Tudou.dir/root/Tudou/event.cc.o: /root/Tudou/event.h
 CMakeFiles/Tudou.dir/root/Tudou/event.cc.o: /root/Tudou/pipe.h
 CMakeFiles/Tudou.dir/root/Tudou/event.cc.o: /root/Tudou/util.h
 
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/channel.h
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/event.h
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/eventlooppool.cc
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/eventlooppool.h
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/pipe.h
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/threadgroup.h
+CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/util.h
+
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/buffer.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/channel.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/error.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/event.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/eventlooppool.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/pipe.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/socket.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/taskqueue.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/tcpconnection.cc
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/tcpconnection.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/threadgroup.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/threadpool.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/timer.h
+CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/util.h
+
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/buffer.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/channel.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/error.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/event.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/eventlooppool.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/pipe.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/socket.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/taskqueue.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/tcpconnection.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/threadgroup.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/threadpool.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/timer.cc
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/timer.h
+CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/util.h
+
 CMakeFiles/Tudou.dir/root/Tudou/util.cc.o: /root/Tudou/util.cc
 CMakeFiles/Tudou.dir/root/Tudou/util.cc.o: /root/Tudou/util.h
 

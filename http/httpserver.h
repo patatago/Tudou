@@ -25,28 +25,31 @@ public:
 void readCb(const TcpConnection::Ptr & ptr)
 {
 	//shared_ptr<TcpConnection> // _read_cb(ptr)
-	_in = ptr->getInput();	//拿到http请求
-	_out = ptr->getOutput();
-	std::cout << "1" << std::endl;
-	_parse.parse(*_in);
-	std::cout << "2" << std::endl;
-	_parse.getHttpMessage().print();
-	//HttpResponse to(_parse.getHttpMessage(), "tudou", *_out);
+	auto _in = ptr->getInput();	//拿到http请求
+	HttpParse _parse;
+	auto flag = _parse.parse(*_in);
+	std::cout <<"------------------"<<std::endl;
+	std::cout << _in->begin() << std::endl;
+	std::cout << "------------------" << std::endl;
+	//if(!flag) _in->reset();
+	//string s1= "<html><title>Tudou Error</title><body bgcolor=ffffff>\r\n404: Not Found\r\n<p>Tudou cannot find this file: ./file.txt\r\n<hr><em>The Tuduo Web server</em>\r\n";
+	//string s2 = "HTTP/1.1 404 Not Found\r\nContent-type: text/html\r\nContent-length: 150\r\n\r\n" + s1;
+	//ptr->send(s2);
+	//std::cout << "input size = " << _in->size() << std::endl;
+	//::write(ptr->getChannel()->getFd(), s2.c_str(), s2.size());
+	auto out = ptr->getOutput();
+	HttpResponse to(_parse.getHttpMessage(), "tudou", *out);
+	//_parse.getHttpMessage().print();
+	to.append();
+	ptr->send(*out);
 	//to.append();
-	// _thread_pool.addTask(
-	// 		[&, this, message]()
-	// 		{
-	// 			ptr->send(message + "\r\n");
-	// 		}
-	// 	);
-	
 }
 
 	void start() //最后一个参数是线程池所创建的线程
 	{
 		TcpServer _temp_server(_main_loop);
-		//_temp_server.setReadCb([this](const TcpConnection::Ptr &con){ readCb(con); });
 		
+		_temp_server.setReadCb([=](const TcpConnection::Ptr &con){readCb(con); });
 		_server = _temp_server.start(_main_loop, _host, _port); //启动监听
 	}
 
@@ -55,7 +58,7 @@ private:
 	uint16_t _port;
 	size_t _threadnum;
 	size_t _eventnum;
-	HttpParse _parse;
+	
 	Buffer *_in, *_out;
 	MessageCallback _read_cb, _write_cb, _close_cb, _connection_cb;
 	EventLoop::Ptr _main_loop;

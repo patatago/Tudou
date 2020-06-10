@@ -3,6 +3,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/Tudou.dir/root/Tudou/event.cc.o"
   "CMakeFiles/Tudou.dir/root/Tudou/util.cc.o"
   "CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o"
+  "CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o"
+  "CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o"
+  "CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o"
   "Tudou.pdb"
   "Tudou"
 )
