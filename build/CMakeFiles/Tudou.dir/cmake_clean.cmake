@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o"
+  "CMakeFiles/Tudou.dir/test_tcpclient.cc.o"
   "CMakeFiles/Tudou.dir/event.cc.o"
   "CMakeFiles/Tudou.dir/util.cc.o"
   "CMakeFiles/Tudou.dir/channel.cc.o"

@@ -36,20 +36,20 @@ CMakeFiles/Tudou.dir/tcpconnection.cc.o: threadpool.h
 CMakeFiles/Tudou.dir/tcpconnection.cc.o: timer.h
 CMakeFiles/Tudou.dir/tcpconnection.cc.o: util.h
 
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: buffer.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: channel.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: error.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: event.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: eventlooppool.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: pipe.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: socket.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: taskqueue.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: tcpconnection.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: tests/test_tcpserver.cc
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: threadgroup.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: threadpool.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: timer.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: util.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: buffer.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: channel.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: error.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: event.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: eventlooppool.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: pipe.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: socket.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: taskqueue.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: tcpconnection.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: test_tcpclient.cc
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: threadgroup.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: threadpool.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: timer.h
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: util.h
 
 CMakeFiles/Tudou.dir/timer.cc.o: buffer.h
 CMakeFiles/Tudou.dir/timer.cc.o: channel.h

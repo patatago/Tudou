@@ -57,18 +57,18 @@ include CMakeFiles/Tudou.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Tudou.dir/flags.make
 
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o: tests/test_tcpserver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o -c /root/Tudou/tests/test_tcpserver.cc
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o: test_tcpclient.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Tudou.dir/test_tcpclient.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/test_tcpclient.cc.o -c /root/Tudou/test_tcpclient.cc
 
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/tests/test_tcpserver.cc > CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.i
+CMakeFiles/Tudou.dir/test_tcpclient.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/test_tcpclient.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/test_tcpclient.cc > CMakeFiles/Tudou.dir/test_tcpclient.cc.i
 
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/tests/test_tcpserver.cc -o CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.s
+CMakeFiles/Tudou.dir/test_tcpclient.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/test_tcpclient.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/test_tcpclient.cc -o CMakeFiles/Tudou.dir/test_tcpclient.cc.s
 
 CMakeFiles/Tudou.dir/event.cc.o: CMakeFiles/Tudou.dir/flags.make
 CMakeFiles/Tudou.dir/event.cc.o: event.cc
@@ -150,7 +150,7 @@ CMakeFiles/Tudou.dir/tcpconnection.cc.s: cmake_force
 
 # Object files for target Tudou
 Tudou_OBJECTS = \
-"CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o" \
+"CMakeFiles/Tudou.dir/test_tcpclient.cc.o" \
 "CMakeFiles/Tudou.dir/event.cc.o" \
 "CMakeFiles/Tudou.dir/util.cc.o" \
 "CMakeFiles/Tudou.dir/channel.cc.o" \
@@ -161,7 +161,7 @@ Tudou_OBJECTS = \
 # External object files for target Tudou
 Tudou_EXTERNAL_OBJECTS =
 
-Tudou: CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o
+Tudou: CMakeFiles/Tudou.dir/test_tcpclient.cc.o
 Tudou: CMakeFiles/Tudou.dir/event.cc.o
 Tudou: CMakeFiles/Tudou.dir/util.cc.o
 Tudou: CMakeFiles/Tudou.dir/channel.cc.o

@@ -231,32 +231,32 @@ tcpconnection.cc.s:
 	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/tcpconnection.cc.s
 .PHONY : tcpconnection.cc.s
 
-tests/test_tcpserver.o: tests/test_tcpserver.cc.o
+test_tcpclient.o: test_tcpclient.cc.o
 
-.PHONY : tests/test_tcpserver.o
+.PHONY : test_tcpclient.o
 
 # target to build an object file
-tests/test_tcpserver.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o
-.PHONY : tests/test_tcpserver.cc.o
+test_tcpclient.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_tcpclient.cc.o
+.PHONY : test_tcpclient.cc.o
 
-tests/test_tcpserver.i: tests/test_tcpserver.cc.i
+test_tcpclient.i: test_tcpclient.cc.i
 
-.PHONY : tests/test_tcpserver.i
+.PHONY : test_tcpclient.i
 
 # target to preprocess a source file
-tests/test_tcpserver.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.i
-.PHONY : tests/test_tcpserver.cc.i
+test_tcpclient.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_tcpclient.cc.i
+.PHONY : test_tcpclient.cc.i
 
-tests/test_tcpserver.s: tests/test_tcpserver.cc.s
+test_tcpclient.s: test_tcpclient.cc.s
 
-.PHONY : tests/test_tcpserver.s
+.PHONY : test_tcpclient.s
 
 # target to generate assembly for a file
-tests/test_tcpserver.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.s
-.PHONY : tests/test_tcpserver.cc.s
+test_tcpclient.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_tcpclient.cc.s
+.PHONY : test_tcpclient.cc.s
 
 timer.o: timer.cc.o
 
@@ -333,9 +333,9 @@ help:
 	@echo "... tcpconnection.o"
 	@echo "... tcpconnection.i"
 	@echo "... tcpconnection.s"
-	@echo "... tests/test_tcpserver.o"
-	@echo "... tests/test_tcpserver.i"
-	@echo "... tests/test_tcpserver.s"
+	@echo "... test_tcpclient.o"
+	@echo "... test_tcpclient.i"
+	@echo "... test_tcpclient.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

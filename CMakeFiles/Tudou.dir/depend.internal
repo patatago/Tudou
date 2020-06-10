@@ -36,7 +36,7 @@ CMakeFiles/Tudou.dir/tcpconnection.cc.o
  /root/Tudou/threadpool.h
  /root/Tudou/timer.h
  /root/Tudou/util.h
-CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o
  /root/Tudou/buffer.h
  /root/Tudou/channel.h
  /root/Tudou/error.h
@@ -46,7 +46,7 @@ CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o
  /root/Tudou/socket.h
  /root/Tudou/taskqueue.h
  /root/Tudou/tcpconnection.h
- /root/Tudou/tests/test_tcpserver.cc
+ /root/Tudou/test_tcpclient.cc
  /root/Tudou/threadgroup.h
  /root/Tudou/threadpool.h
  /root/Tudou/timer.h

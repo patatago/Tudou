@@ -1,8 +1,8 @@
 [
 {
   "directory": "/root/Tudou/build",
-  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/tests/test_tcpserver.cc.o -c /root/Tudou/tests/test_tcpserver.cc",
-  "file": "/root/Tudou/tests/test_tcpserver.cc"
+  "command": "/usr/bin/g++    -g -std=c++11 -lpthread -g   -o CMakeFiles/Tudou.dir/test_tcpclient.cc.o -c /root/Tudou/test_tcpclient.cc",
+  "file": "/root/Tudou/test_tcpclient.cc"
 },
 {
   "directory": "/root/Tudou/build",
