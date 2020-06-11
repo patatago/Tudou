@@ -69,34 +69,47 @@ void TcpConnection::setErrorCb(const ErrorCallback &cb)
 
 int TcpConnection::send(const string &msg) {  send(msg.c_str(), msg.size()); }
 
-int TcpConnection::send(Buffer &buffer)
-{
-    if(_channel)
-    {
-        auto ret = SocketTool::sendPart(_channel->getFd(), buffer);
-        if(ret.second == -1)
-        {
-            return -1; //发送不成功
-        }
-        else if(ret.second == 1) 
-        {
-            //std::cout << "***************" << std::endl;
-            _channel->enableWrite(false);
-            //全部发送成功
-        }
-        else
-        {
-            if(!_channel->isWrite()) { _channel->enableWrite(true); }
-           
-        }  
-    }
-    return 1;
-}
 /*
     1. 缓冲区没有数据尝试直接::write
     2. 若有数据就append到缓冲区
     3. 没全部发完把剩下的append到缓冲区
 */
+// int TcpConnection::send(const char *msg, size_t len)
+// {
+//     if(_channel)
+//     {
+//         if(!_output.empty()) //输出缓冲区有数据还没有发送
+//         {
+//             _output.append(msg, len);
+//             if(!_channel->isWrite()) { _channel->enableWrite(true);}
+//             return 0;
+//         }
+//         //尝试直接发送
+    
+//         auto ret = SocketTool::sendPart(_channel->getFd(), msg, len);
+
+//         auto &_err = ret.first;
+//         if(ret.second == 0)
+//         {
+//             return -1; //发送不成功
+//         }
+//         if(ret.second == len)
+//         {
+//             return len; //全部发送成功
+//         }
+   
+//         _output.append(msg+ret.second, len-ret.second); //剩下的加入缓冲区
+//         if(!_channel->isWrite()) {_channel->enableWrite(true);}
+//         return 1;
+//     }
+//     return -1;
+// }
+/*
+    1. 缓冲区没有数据尝试直接::write
+    2. 若有数据就append到缓冲区
+    3. 没全部发完把剩下的append到缓冲区
+*/
+
 int TcpConnection::send(const char *msg, size_t len)
 {
     if(_channel)
@@ -104,28 +117,37 @@ int TcpConnection::send(const char *msg, size_t len)
         if(!_output.empty()) //输出缓冲区有数据还没有发送
         {
             _output.append(msg, len);
-            if(!_channel->isWrite()) { _channel->enableWrite(true);}
             return 0;
         }
         //尝试直接发送
     
         auto ret = SocketTool::sendPart(_channel->getFd(), msg, len);
-
-        auto &_err = ret.first;
-        if(ret.second == 0)
+        if(ret.second == -2)
         {
+            //std::cout <<"____________w"<< std::endl;
+            _channel->close();
             return -1; //发送不成功
         }
-        if(ret.second == len)
+        else if(ret.second == len)
         {
+            _channel->enableWrite(false);    
             return len; //全部发送成功
         }
    
         _output.append(msg+ret.second, len-ret.second); //剩下的加入缓冲区
+        //std::cout <<"____________w"<< _output.size() <<std::endl;
         if(!_channel->isWrite()) {_channel->enableWrite(true);}
-        return 1;
+        handleWrite(shared_from_this());
+        return ret.second;
     }
-    return -1;
+
+}
+
+
+int TcpConnection::send(Buffer &buffer)
+{
+    std::cout << buffer.size() << std::endl;
+    auto ret = send(buffer.begin(), buffer.size());
 }
 
 EventLoop::Ptr TcpConnection::getEventLoop() { return _loop; }
@@ -154,21 +176,26 @@ void TcpConnection::shutdown()
 //处理读事件,如果使用lt模式，有数据就会一直触发
 void TcpConnection::handleRead(const Ptr &ptr)
 {	
+   // std::cout << "begin" << std::endl;
     //unique_lock<mutex> lck(_mutex);
     if(_state == TcpConnection::HANDSHAKING && !handleHandshake(ptr)) //判断是否链接
     {
         return ;
     }
-    auto sockfd = _channel->getFd();
+    
     if(_state == CONNECTED && _channel->getFd() > 0)
     {
 
         auto ret = SocketTool::readPart(_channel->getFd(), _input);	
+        //std::cout << _input.begin() << std::endl;
         if(ret.second == -1) //断开连接
         {
-            std::cout << "this is read" << std::endl;
-            //_channel->close();
             shutdown();
+            return ;
+        }
+        else if(ret.second == -2)
+        {
+            //std::cout << "this is read 2" << std::endl;
             return ;
         }
    
@@ -178,12 +205,10 @@ void TcpConnection::handleRead(const Ptr &ptr)
             _timer.lock()->reset();
         }
         
-        if(_read_cb && ret.second)
+        if(_read_cb && ret.second > 0)
         {	
             _read_cb(ptr);
         }
-        //ptr->_channel->enableRead(false);
-        //ptr->_channel->enableWrite(true);
         return ;
     
     }
@@ -192,7 +217,6 @@ void TcpConnection::handleRead(const Ptr &ptr)
 void TcpConnection::handleWrite(const Ptr &ptr)
 {
     unique_lock<mutex> lck(_mutex);
-    
     if(ptr->getState() == TcpConnection::HANDSHAKING)
     {
         handleHandshake(ptr);
@@ -204,23 +228,28 @@ void TcpConnection::handleWrite(const Ptr &ptr)
         if(_output.empty())
         {
             if(_write_cb) { _write_cb(ptr); }
+            ptr->_channel->enableWrite(false);
             return ;
         }
+        int part = 0, len = _output.size();
+
         auto ret = SocketTool::sendPart(_channel->getFd(), _output);
-         //std::cout << "this is write__" << _output.size() << std::endl;
         if(ret.second == -2) //sigpipe
         {
-            std::cout << "this is write__" << std::endl;
             _channel->close();
             return ;
         }
         if(ret.second == -1) //发送失败
         {
-            
             shutdown(); //--shutdown会死循环
             return ;
         }
-
+        //if(ret.second == 0) std::cout << "sockbuffer is full" <<std::endl;
+        if(!ptr->_channel->isWrite())
+        {
+            ptr->_channel->enableWrite(true);
+        }
+        _output.consume(ret.second);
         if(_write_cb)
         {
             _write_cb(ptr);
@@ -229,7 +258,6 @@ void TcpConnection::handleWrite(const Ptr &ptr)
         {
             ptr->_channel->enableWrite(false);
         }
-        //ptr->_channel->enableRead(true);
     }
     
 
@@ -384,78 +412,76 @@ void TcpServer::setConnectionCb(const MessageCallback &cb) { _connection_cb = cb
 Channel::Ptr TcpServer::getChannel() { return _channel; }
 void TcpServer::handleAccept(shared_ptr<TcpServer> _conn) //listen readcb
 {
-    
-    auto _channel = _conn->getChannel();
+    int connfd;
     struct sockaddr_in client;
     memset(&client, 0, sizeof(client));
     socklen_t len = sizeof(client);
     //链接客户端
     
-    int connfd = ::accept(_channel->getFd(), (struct sockaddr *)&client, &len);
-    if(connfd < 0)
-    {
-        std::cout<< strerror(errno);
-        return ;
-    }
     
-    auto _choose_loop = EventLoopPool::getInstance().choose(); //选取一个eventloop
-    //if(_choose_loop == _loop)	std::cout << "great" << std::endl;
-    SocketTool::setNonBlock(connfd, true); //设置非阻塞
-    SocketTool::setCloseOnExec(connfd);
-    TcpConnection::Ptr con(new TcpConnection(_choose_loop, connfd)); //新建一个tcpconnection
-    con->setState(TcpConnection::CONNECTED); //已链接
-    con->getAddress().set(SocketTool::inetNtop(client), SocketTool::ntoh(client.sin_port)); //链接客户端的信息
-   
-   
-    _connections[con->_name] = con; //有一个链接加入
-    std::cout << " this is a new connection: " <<_connections.size()<< std::endl;
-     //  cout << strerror(errno)<<"-------------------" << endl;
-    auto fun = [=]()
-                {
-                    //加入定时器，超时断开连接
-                    //还要设置connection的timer
-        #if 0
-                    auto _time = make_shared<Timer>(_CLOSE_TIME_, [=]()
-                        {
-                            con->getTimer().lock()->delTimer();
-                            con->shutdown();  
-                            return false;
-                        }
-                    , con);
+    while((connfd = ::accept(_channel->getFd(), (struct sockaddr *)&client, &len)) >= 0)
+    {
+
+        auto _choose_loop = EventLoopPool::getInstance().choose(); //选取一个eventloop
+        //if(_choose_loop == _loop)	std::cout << "great" << std::endl;
+        SocketTool::setNonBlock(connfd, true); //设置非阻塞
+        SocketTool::setCloseOnExec(connfd);
+        SocketTool::setCloseWait(connfd, 1); 
+        TcpConnection::Ptr con(new TcpConnection(_choose_loop, connfd)); //新建一个tcpconnection
+        con->setState(TcpConnection::CONNECTED); //已链接
+        con->getAddress().set(SocketTool::inetNtop(client), SocketTool::ntoh(client.sin_port)); //链接客户端的信息
 
 
-                    con->setTimer(_time);
+        _connections[con->_name] = con; //有一个链接加入
+        std::cout << " this is a new connection: " <<_connections.size()<< std::endl;
+            //  cout << strerror(errno)<<"-------------------" << endl;
+        auto fun = [=]()
+                    {
+                        //加入定时器，超时断开连接
+                        //还要设置connection的timer
+            #if 0
+                        auto _time = make_shared<Timer>(_CLOSE_TIME_, [=]()
+                            {
+                                con->getTimer().lock()->delTimer();
+                                con->shutdown();  
+                                return false;
+                            }
+                        , con);
 
-                    TimerManager::getInstance().addTimer(_time);
-         #endif    
-                    
-                    con->setReadCb([=](const TcpConnection::Ptr &s) 
-                                    {
-                                        if(_read_cb)	{ _read_cb(s); }
-                                    } );	
 
-                    con->setWriteCb([&, this](const TcpConnection::Ptr &s) 
-                                    {
-                                        if(_write_cb)	{ _write_cb(s); }
-                                    } );	
-                    con->setCloseCb([&, this](const TcpConnection::Ptr &s) 
-                                    {
-                                        _connections.erase(s->_name);
-                                        if(_close_cb)	{ _close_cb(s); }
-                                    } );						
-                                    
-                    con->setErrorCb([&, this](const TcpConnection::Ptr &x, const Error &s)
-                                    {
-                                        if(_error_cb) { _error_cb(x, s); }
-                                    } );
-                    
-                    if(_connection_cb) { _connection_cb(con); }
-                       
-                    con->set(_choose_loop, connfd); //新建channel并加入监听
-                   
-                };
+                        con->setTimer(_time);
 
-    _loop->runAsync(fun, true);
+                        TimerManager::getInstance().addTimer(_time);
+                #endif    
+                        
+                        con->setReadCb([=](const TcpConnection::Ptr &s) 
+                                        {
+                                            if(_read_cb)	{ _read_cb(s); }
+                                        } );	
+
+                        con->setWriteCb([&, this](const TcpConnection::Ptr &s) 
+                                        {
+                                            if(_write_cb)	{ _write_cb(s); }
+                                        } );	
+                        con->setCloseCb([&, this](const TcpConnection::Ptr &s) 
+                                        {
+                                            _connections.erase(s->_name);
+                                            if(_close_cb)	{ _close_cb(s); }
+                                        } );						
+                                        
+                        con->setErrorCb([&, this](const TcpConnection::Ptr &x, const Error &s)
+                                        {
+                                            if(_error_cb) { _error_cb(x, s); }
+                                        } );
+                        
+                        if(_connection_cb) { _connection_cb(con); }
+                            
+                        con->set(_choose_loop, connfd); //新建channel并加入监听
+                        
+                    };
+            //fun();
+        _loop->runAsync(fun, true);
+    }
 
 }
 

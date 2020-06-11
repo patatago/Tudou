@@ -127,6 +127,16 @@ public:
 		}
 	}
 
+	static int setCloseWait(int sockFd, int second) 
+	{
+		struct linger sockLinger;
+		//在调用closesocket()时还有数据未发送完，允许等待
+		// 若m_sLinger.l_onoff=0;则调用closesocket()后强制关闭
+		sockLinger.l_onoff = (second > 0);
+		sockLinger.l_linger = second; //设置等待时间为x秒
+		int ret = setsockopt(sockFd, SOL_SOCKET, SO_LINGER, (char*) &sockLinger, sizeof(linger));
+		return ret;
+	}
 	static int socketTcp()
 	{
 		int ret = socket(AF_INET, SOCK_STREAM, 0); 
@@ -185,6 +195,7 @@ public:
 		setNonBlock(fd, true);
 		//std::cout << std::endl<<strerror(errno) << "0---2---1--" << "+++++"<<std::endl;
 		setCloseOnExec(fd);
+		setCloseWait(fd, 1); 
 		auto flag = bindTcp(fd, ip, port);
 		if(flag < 0)
 		{
@@ -234,7 +245,8 @@ public:
 	static pair<Error, int>
 	sendPart(int sockfd, const char *msg, size_t len)
 	{
-		size_t ret = 0, part = 0;
+		errno = 0;
+		int ret = 0, part = 0;
 		Error _error(Error::OK, "send ok");
 		while(1)
 		{
@@ -245,22 +257,33 @@ public:
 				{
 					continue;
 				}
+				else if(errno == EPIPE)
+				{ 
+					_error.setErrno(errno);
+					return make_pair(_error, -2);
+				}
 				else if(errno == EAGAIN)
 				{
-					return make_pair(_error, part);
+					_error.setErrno(errno);
+					return make_pair(_error, part);  //全部发送
 				}
 				else
 				{	
-					if(errno == EPIPE) std::cout << "1111111111111188888811111111111111" << std::endl;
-					std::cout << strerror(errno) << "1--------" << std::endl;	
+					 if(ret == 0)
+					 { 
+						//std::cout <<part<<std::endl;
+					 	return make_pair(_error, -2);
+					 }
 					_error.setType(Error::ERROR);
-					return make_pair(_error, 0);
+					if(ret == -1)	return make_pair(_error, part);
 				}
 				
 			}
 			else
 			{
 				part += ret;
+				if(part == len) {return make_pair(_error, part);} 
+
 			}
 			
 		}
@@ -271,49 +294,10 @@ public:
 	sendPart(int sockfd, Buffer &_buffer)
 	{
 		//尽可能全部发送
-		int count = 0, len = _buffer.size();
-		Error _error(Error::OK, "send ok");
-		int ret = 0, part = 0; //ret表示写成功的字符数， part表示总共发送了多少
-
-		while(1)
-		{
-			ret = ::write(sockfd, _buffer.begin() + part, len - part);
-			if(ret <= 0)
-			{
-				if(errno == EINTR)
-				{
-					continue;
-				}
-				else if(errno == EAGAIN)
-				{
-					_error.setErrno(errno);
-					if(len == part)		{ return make_pair(_error, 1); } //全部发送
-					else 	{ return make_pair(_error, 0); }
-					
-				}
-				else if(errno == EPIPE) 
-				{ 
-					_error.setErrno(errno);
-					make_pair(_error, -2);
-				}
-				else
-				{
-					if(errno == EPIPE) std::cout << "1111111111111111111111111111" << std::endl;
-					_error.setType(Error::ERROR);
-					return make_pair(_error, -1);
-				}
-				
-			}
-			else
-			{
-				_buffer.consume(ret);
-				part += ret;
-			}
-		}
+		return sendPart(sockfd, _buffer.begin(), _buffer.size());
 		
 	}
-	
-	
+
 	static pair<Error, int>
 	readPart(int sockfd, Buffer &_buffer)
 	{
@@ -326,8 +310,6 @@ public:
 		while(1)
 		{
 			ret = ::read(sockfd, _temp_buffer, sizeof(_temp_buffer));
-			
-			//std::cout << _temp_buffer << std::endl;
 				
 			if(ret <= 0)
 			{
@@ -342,8 +324,9 @@ public:
 				else
 				{
 					_error.setType(Error::CONNECT_ERROR);
-					_error.setMsg("signal is Error::CONNECT_ERROR");
-					return make_pair(_error, -1);
+					if(ret == 0) return make_pair(_error, -1);
+					if(ret == -1) return make_pair(_error, -2);
+					
 				}
 			}
 			else
@@ -351,7 +334,6 @@ public:
 				_buffer.append(_temp_buffer, ret); //存到缓冲区
 				part += ret;
 				if(ret < 65536) return make_pair(_error, part);
-			//	if(ret != 65536) { break; }
 			}
 		}
 			

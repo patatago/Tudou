@@ -24,25 +24,20 @@ public:
 	
 void readCb(const TcpConnection::Ptr & ptr)
 {
-	//shared_ptr<TcpConnection> // _read_cb(ptr)
 	auto _in = ptr->getInput();	//拿到http请求
 	HttpParse _parse;
+	//  std::cout <<"------------------"<<std::endl;
+	// std::cout << _in->begin() << std::endl;
+	// std::cout << "------------------" << std::endl;
 	auto flag = _parse.parse(*_in);
-	std::cout <<"------------------"<<std::endl;
-	std::cout << _in->begin() << std::endl;
-	std::cout << "------------------" << std::endl;
-	//if(!flag) _in->reset();
-	//string s1= "<html><title>Tudou Error</title><body bgcolor=ffffff>\r\n404: Not Found\r\n<p>Tudou cannot find this file: ./file.txt\r\n<hr><em>The Tuduo Web server</em>\r\n";
-	//string s2 = "HTTP/1.1 404 Not Found\r\nContent-type: text/html\r\nContent-length: 150\r\n\r\n" + s1;
-	//ptr->send(s2);
-	//std::cout << "input size = " << _in->size() << std::endl;
-	//::write(ptr->getChannel()->getFd(), s2.c_str(), s2.size());
-	auto out = ptr->getOutput();
-	HttpResponse to(_parse.getHttpMessage(), "tudou", *out);
-	//_parse.getHttpMessage().print();
+	
+	Buffer out;// = *(ptr->getOutput());
+	HttpResponse to(_parse.getHttpMessage(), "tudou", out);
+	
 	to.append();
-	ptr->send(*out);
-	//to.append();
+	ptr->send(out.begin(), out.size());
+	if(!flag)	ptr->getChannel()->close();
+	
 }
 
 	void start() //最后一个参数是线程池所创建的线程
