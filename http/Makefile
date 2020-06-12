@@ -177,356 +177,437 @@ httpserver.cc.s:
 	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/httpserver.cc.s
 .PHONY : httpserver.cc.s
 
-root/Tudou/buffer.o: root/Tudou/buffer.cc.o
+root/Tudou/log/blockqueue.o: root/Tudou/log/blockqueue.cc.o
 
-.PHONY : root/Tudou/buffer.o
-
-# target to build an object file
-root/Tudou/buffer.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o
-.PHONY : root/Tudou/buffer.cc.o
-
-root/Tudou/buffer.i: root/Tudou/buffer.cc.i
-
-.PHONY : root/Tudou/buffer.i
-
-# target to preprocess a source file
-root/Tudou/buffer.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.i
-.PHONY : root/Tudou/buffer.cc.i
-
-root/Tudou/buffer.s: root/Tudou/buffer.cc.s
-
-.PHONY : root/Tudou/buffer.s
-
-# target to generate assembly for a file
-root/Tudou/buffer.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.s
-.PHONY : root/Tudou/buffer.cc.s
-
-root/Tudou/channel.o: root/Tudou/channel.cc.o
-
-.PHONY : root/Tudou/channel.o
+.PHONY : root/Tudou/log/blockqueue.o
 
 # target to build an object file
-root/Tudou/channel.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o
-.PHONY : root/Tudou/channel.cc.o
+root/Tudou/log/blockqueue.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o
+.PHONY : root/Tudou/log/blockqueue.cc.o
 
-root/Tudou/channel.i: root/Tudou/channel.cc.i
+root/Tudou/log/blockqueue.i: root/Tudou/log/blockqueue.cc.i
 
-.PHONY : root/Tudou/channel.i
+.PHONY : root/Tudou/log/blockqueue.i
 
 # target to preprocess a source file
-root/Tudou/channel.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/channel.cc.i
-.PHONY : root/Tudou/channel.cc.i
+root/Tudou/log/blockqueue.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.i
+.PHONY : root/Tudou/log/blockqueue.cc.i
 
-root/Tudou/channel.s: root/Tudou/channel.cc.s
+root/Tudou/log/blockqueue.s: root/Tudou/log/blockqueue.cc.s
 
-.PHONY : root/Tudou/channel.s
+.PHONY : root/Tudou/log/blockqueue.s
 
 # target to generate assembly for a file
-root/Tudou/channel.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/channel.cc.s
-.PHONY : root/Tudou/channel.cc.s
+root/Tudou/log/blockqueue.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.s
+.PHONY : root/Tudou/log/blockqueue.cc.s
 
-root/Tudou/error.o: root/Tudou/error.cc.o
+root/Tudou/log/log.o: root/Tudou/log/log.cc.o
 
-.PHONY : root/Tudou/error.o
+.PHONY : root/Tudou/log/log.o
 
 # target to build an object file
-root/Tudou/error.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/error.cc.o
-.PHONY : root/Tudou/error.cc.o
+root/Tudou/log/log.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o
+.PHONY : root/Tudou/log/log.cc.o
 
-root/Tudou/error.i: root/Tudou/error.cc.i
+root/Tudou/log/log.i: root/Tudou/log/log.cc.i
 
-.PHONY : root/Tudou/error.i
+.PHONY : root/Tudou/log/log.i
 
 # target to preprocess a source file
-root/Tudou/error.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/error.cc.i
-.PHONY : root/Tudou/error.cc.i
+root/Tudou/log/log.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.i
+.PHONY : root/Tudou/log/log.cc.i
 
-root/Tudou/error.s: root/Tudou/error.cc.s
+root/Tudou/log/log.s: root/Tudou/log/log.cc.s
 
-.PHONY : root/Tudou/error.s
+.PHONY : root/Tudou/log/log.s
 
 # target to generate assembly for a file
-root/Tudou/error.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/error.cc.s
-.PHONY : root/Tudou/error.cc.s
+root/Tudou/log/log.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.s
+.PHONY : root/Tudou/log/log.cc.s
 
-root/Tudou/event.o: root/Tudou/event.cc.o
+root/Tudou/net/socket.o: root/Tudou/net/socket.cc.o
 
-.PHONY : root/Tudou/event.o
+.PHONY : root/Tudou/net/socket.o
 
 # target to build an object file
-root/Tudou/event.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/event.cc.o
-.PHONY : root/Tudou/event.cc.o
+root/Tudou/net/socket.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o
+.PHONY : root/Tudou/net/socket.cc.o
 
-root/Tudou/event.i: root/Tudou/event.cc.i
+root/Tudou/net/socket.i: root/Tudou/net/socket.cc.i
 
-.PHONY : root/Tudou/event.i
+.PHONY : root/Tudou/net/socket.i
 
 # target to preprocess a source file
-root/Tudou/event.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/event.cc.i
-.PHONY : root/Tudou/event.cc.i
+root/Tudou/net/socket.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.i
+.PHONY : root/Tudou/net/socket.cc.i
 
-root/Tudou/event.s: root/Tudou/event.cc.s
+root/Tudou/net/socket.s: root/Tudou/net/socket.cc.s
 
-.PHONY : root/Tudou/event.s
+.PHONY : root/Tudou/net/socket.s
 
 # target to generate assembly for a file
-root/Tudou/event.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/event.cc.s
-.PHONY : root/Tudou/event.cc.s
+root/Tudou/net/socket.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.s
+.PHONY : root/Tudou/net/socket.cc.s
 
-root/Tudou/eventlooppool.o: root/Tudou/eventlooppool.cc.o
+root/Tudou/net/tcpconnection.o: root/Tudou/net/tcpconnection.cc.o
 
-.PHONY : root/Tudou/eventlooppool.o
+.PHONY : root/Tudou/net/tcpconnection.o
 
 # target to build an object file
-root/Tudou/eventlooppool.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o
-.PHONY : root/Tudou/eventlooppool.cc.o
+root/Tudou/net/tcpconnection.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o
+.PHONY : root/Tudou/net/tcpconnection.cc.o
 
-root/Tudou/eventlooppool.i: root/Tudou/eventlooppool.cc.i
+root/Tudou/net/tcpconnection.i: root/Tudou/net/tcpconnection.cc.i
 
-.PHONY : root/Tudou/eventlooppool.i
+.PHONY : root/Tudou/net/tcpconnection.i
 
 # target to preprocess a source file
-root/Tudou/eventlooppool.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.i
-.PHONY : root/Tudou/eventlooppool.cc.i
+root/Tudou/net/tcpconnection.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.i
+.PHONY : root/Tudou/net/tcpconnection.cc.i
 
-root/Tudou/eventlooppool.s: root/Tudou/eventlooppool.cc.s
+root/Tudou/net/tcpconnection.s: root/Tudou/net/tcpconnection.cc.s
 
-.PHONY : root/Tudou/eventlooppool.s
+.PHONY : root/Tudou/net/tcpconnection.s
 
 # target to generate assembly for a file
-root/Tudou/eventlooppool.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.s
-.PHONY : root/Tudou/eventlooppool.cc.s
+root/Tudou/net/tcpconnection.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.s
+.PHONY : root/Tudou/net/tcpconnection.cc.s
 
-root/Tudou/pipe.o: root/Tudou/pipe.cc.o
+root/Tudou/poller/channel.o: root/Tudou/poller/channel.cc.o
 
-.PHONY : root/Tudou/pipe.o
+.PHONY : root/Tudou/poller/channel.o
 
 # target to build an object file
-root/Tudou/pipe.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o
-.PHONY : root/Tudou/pipe.cc.o
+root/Tudou/poller/channel.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o
+.PHONY : root/Tudou/poller/channel.cc.o
 
-root/Tudou/pipe.i: root/Tudou/pipe.cc.i
+root/Tudou/poller/channel.i: root/Tudou/poller/channel.cc.i
 
-.PHONY : root/Tudou/pipe.i
+.PHONY : root/Tudou/poller/channel.i
 
 # target to preprocess a source file
-root/Tudou/pipe.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.i
-.PHONY : root/Tudou/pipe.cc.i
+root/Tudou/poller/channel.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.i
+.PHONY : root/Tudou/poller/channel.cc.i
 
-root/Tudou/pipe.s: root/Tudou/pipe.cc.s
+root/Tudou/poller/channel.s: root/Tudou/poller/channel.cc.s
 
-.PHONY : root/Tudou/pipe.s
+.PHONY : root/Tudou/poller/channel.s
 
 # target to generate assembly for a file
-root/Tudou/pipe.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.s
-.PHONY : root/Tudou/pipe.cc.s
+root/Tudou/poller/channel.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.s
+.PHONY : root/Tudou/poller/channel.cc.s
 
-root/Tudou/socket.o: root/Tudou/socket.cc.o
+root/Tudou/poller/epoll.o: root/Tudou/poller/epoll.cc.o
 
-.PHONY : root/Tudou/socket.o
+.PHONY : root/Tudou/poller/epoll.o
 
 # target to build an object file
-root/Tudou/socket.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o
-.PHONY : root/Tudou/socket.cc.o
+root/Tudou/poller/epoll.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o
+.PHONY : root/Tudou/poller/epoll.cc.o
 
-root/Tudou/socket.i: root/Tudou/socket.cc.i
+root/Tudou/poller/epoll.i: root/Tudou/poller/epoll.cc.i
 
-.PHONY : root/Tudou/socket.i
+.PHONY : root/Tudou/poller/epoll.i
 
 # target to preprocess a source file
-root/Tudou/socket.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/socket.cc.i
-.PHONY : root/Tudou/socket.cc.i
+root/Tudou/poller/epoll.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.i
+.PHONY : root/Tudou/poller/epoll.cc.i
 
-root/Tudou/socket.s: root/Tudou/socket.cc.s
+root/Tudou/poller/epoll.s: root/Tudou/poller/epoll.cc.s
 
-.PHONY : root/Tudou/socket.s
+.PHONY : root/Tudou/poller/epoll.s
 
 # target to generate assembly for a file
-root/Tudou/socket.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/socket.cc.s
-.PHONY : root/Tudou/socket.cc.s
+root/Tudou/poller/epoll.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.s
+.PHONY : root/Tudou/poller/epoll.cc.s
 
-root/Tudou/taskqueue.o: root/Tudou/taskqueue.cc.o
+root/Tudou/poller/event.o: root/Tudou/poller/event.cc.o
 
-.PHONY : root/Tudou/taskqueue.o
+.PHONY : root/Tudou/poller/event.o
 
 # target to build an object file
-root/Tudou/taskqueue.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o
-.PHONY : root/Tudou/taskqueue.cc.o
+root/Tudou/poller/event.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o
+.PHONY : root/Tudou/poller/event.cc.o
 
-root/Tudou/taskqueue.i: root/Tudou/taskqueue.cc.i
+root/Tudou/poller/event.i: root/Tudou/poller/event.cc.i
 
-.PHONY : root/Tudou/taskqueue.i
+.PHONY : root/Tudou/poller/event.i
 
 # target to preprocess a source file
-root/Tudou/taskqueue.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.i
-.PHONY : root/Tudou/taskqueue.cc.i
+root/Tudou/poller/event.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.i
+.PHONY : root/Tudou/poller/event.cc.i
 
-root/Tudou/taskqueue.s: root/Tudou/taskqueue.cc.s
+root/Tudou/poller/event.s: root/Tudou/poller/event.cc.s
 
-.PHONY : root/Tudou/taskqueue.s
+.PHONY : root/Tudou/poller/event.s
 
 # target to generate assembly for a file
-root/Tudou/taskqueue.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.s
-.PHONY : root/Tudou/taskqueue.cc.s
+root/Tudou/poller/event.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.s
+.PHONY : root/Tudou/poller/event.cc.s
 
-root/Tudou/tcpconnection.o: root/Tudou/tcpconnection.cc.o
+root/Tudou/poller/eventlooppool.o: root/Tudou/poller/eventlooppool.cc.o
 
-.PHONY : root/Tudou/tcpconnection.o
+.PHONY : root/Tudou/poller/eventlooppool.o
 
 # target to build an object file
-root/Tudou/tcpconnection.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o
-.PHONY : root/Tudou/tcpconnection.cc.o
+root/Tudou/poller/eventlooppool.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o
+.PHONY : root/Tudou/poller/eventlooppool.cc.o
 
-root/Tudou/tcpconnection.i: root/Tudou/tcpconnection.cc.i
+root/Tudou/poller/eventlooppool.i: root/Tudou/poller/eventlooppool.cc.i
 
-.PHONY : root/Tudou/tcpconnection.i
+.PHONY : root/Tudou/poller/eventlooppool.i
 
 # target to preprocess a source file
-root/Tudou/tcpconnection.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.i
-.PHONY : root/Tudou/tcpconnection.cc.i
+root/Tudou/poller/eventlooppool.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.i
+.PHONY : root/Tudou/poller/eventlooppool.cc.i
 
-root/Tudou/tcpconnection.s: root/Tudou/tcpconnection.cc.s
+root/Tudou/poller/eventlooppool.s: root/Tudou/poller/eventlooppool.cc.s
 
-.PHONY : root/Tudou/tcpconnection.s
+.PHONY : root/Tudou/poller/eventlooppool.s
 
 # target to generate assembly for a file
-root/Tudou/tcpconnection.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.s
-.PHONY : root/Tudou/tcpconnection.cc.s
+root/Tudou/poller/eventlooppool.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.s
+.PHONY : root/Tudou/poller/eventlooppool.cc.s
 
-root/Tudou/threadgroup.o: root/Tudou/threadgroup.cc.o
+root/Tudou/poller/pipe.o: root/Tudou/poller/pipe.cc.o
 
-.PHONY : root/Tudou/threadgroup.o
+.PHONY : root/Tudou/poller/pipe.o
 
 # target to build an object file
-root/Tudou/threadgroup.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o
-.PHONY : root/Tudou/threadgroup.cc.o
+root/Tudou/poller/pipe.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o
+.PHONY : root/Tudou/poller/pipe.cc.o
 
-root/Tudou/threadgroup.i: root/Tudou/threadgroup.cc.i
+root/Tudou/poller/pipe.i: root/Tudou/poller/pipe.cc.i
 
-.PHONY : root/Tudou/threadgroup.i
+.PHONY : root/Tudou/poller/pipe.i
 
 # target to preprocess a source file
-root/Tudou/threadgroup.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.i
-.PHONY : root/Tudou/threadgroup.cc.i
+root/Tudou/poller/pipe.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.i
+.PHONY : root/Tudou/poller/pipe.cc.i
 
-root/Tudou/threadgroup.s: root/Tudou/threadgroup.cc.s
+root/Tudou/poller/pipe.s: root/Tudou/poller/pipe.cc.s
 
-.PHONY : root/Tudou/threadgroup.s
+.PHONY : root/Tudou/poller/pipe.s
 
 # target to generate assembly for a file
-root/Tudou/threadgroup.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.s
-.PHONY : root/Tudou/threadgroup.cc.s
+root/Tudou/poller/pipe.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.s
+.PHONY : root/Tudou/poller/pipe.cc.s
 
-root/Tudou/threadpool.o: root/Tudou/threadpool.cc.o
+root/Tudou/thread/taskqueue.o: root/Tudou/thread/taskqueue.cc.o
 
-.PHONY : root/Tudou/threadpool.o
+.PHONY : root/Tudou/thread/taskqueue.o
 
 # target to build an object file
-root/Tudou/threadpool.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o
-.PHONY : root/Tudou/threadpool.cc.o
+root/Tudou/thread/taskqueue.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o
+.PHONY : root/Tudou/thread/taskqueue.cc.o
 
-root/Tudou/threadpool.i: root/Tudou/threadpool.cc.i
+root/Tudou/thread/taskqueue.i: root/Tudou/thread/taskqueue.cc.i
 
-.PHONY : root/Tudou/threadpool.i
+.PHONY : root/Tudou/thread/taskqueue.i
 
 # target to preprocess a source file
-root/Tudou/threadpool.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.i
-.PHONY : root/Tudou/threadpool.cc.i
+root/Tudou/thread/taskqueue.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.i
+.PHONY : root/Tudou/thread/taskqueue.cc.i
 
-root/Tudou/threadpool.s: root/Tudou/threadpool.cc.s
+root/Tudou/thread/taskqueue.s: root/Tudou/thread/taskqueue.cc.s
 
-.PHONY : root/Tudou/threadpool.s
+.PHONY : root/Tudou/thread/taskqueue.s
 
 # target to generate assembly for a file
-root/Tudou/threadpool.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.s
-.PHONY : root/Tudou/threadpool.cc.s
+root/Tudou/thread/taskqueue.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.s
+.PHONY : root/Tudou/thread/taskqueue.cc.s
 
-root/Tudou/timer.o: root/Tudou/timer.cc.o
+root/Tudou/thread/threadgroup.o: root/Tudou/thread/threadgroup.cc.o
 
-.PHONY : root/Tudou/timer.o
+.PHONY : root/Tudou/thread/threadgroup.o
 
 # target to build an object file
-root/Tudou/timer.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o
-.PHONY : root/Tudou/timer.cc.o
+root/Tudou/thread/threadgroup.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o
+.PHONY : root/Tudou/thread/threadgroup.cc.o
 
-root/Tudou/timer.i: root/Tudou/timer.cc.i
+root/Tudou/thread/threadgroup.i: root/Tudou/thread/threadgroup.cc.i
 
-.PHONY : root/Tudou/timer.i
+.PHONY : root/Tudou/thread/threadgroup.i
 
 # target to preprocess a source file
-root/Tudou/timer.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/timer.cc.i
-.PHONY : root/Tudou/timer.cc.i
+root/Tudou/thread/threadgroup.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.i
+.PHONY : root/Tudou/thread/threadgroup.cc.i
 
-root/Tudou/timer.s: root/Tudou/timer.cc.s
+root/Tudou/thread/threadgroup.s: root/Tudou/thread/threadgroup.cc.s
 
-.PHONY : root/Tudou/timer.s
+.PHONY : root/Tudou/thread/threadgroup.s
 
 # target to generate assembly for a file
-root/Tudou/timer.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/timer.cc.s
-.PHONY : root/Tudou/timer.cc.s
+root/Tudou/thread/threadgroup.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.s
+.PHONY : root/Tudou/thread/threadgroup.cc.s
 
-root/Tudou/util.o: root/Tudou/util.cc.o
+root/Tudou/thread/threadpool.o: root/Tudou/thread/threadpool.cc.o
 
-.PHONY : root/Tudou/util.o
+.PHONY : root/Tudou/thread/threadpool.o
 
 # target to build an object file
-root/Tudou/util.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util.cc.o
-.PHONY : root/Tudou/util.cc.o
+root/Tudou/thread/threadpool.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o
+.PHONY : root/Tudou/thread/threadpool.cc.o
 
-root/Tudou/util.i: root/Tudou/util.cc.i
+root/Tudou/thread/threadpool.i: root/Tudou/thread/threadpool.cc.i
 
-.PHONY : root/Tudou/util.i
+.PHONY : root/Tudou/thread/threadpool.i
 
 # target to preprocess a source file
-root/Tudou/util.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util.cc.i
-.PHONY : root/Tudou/util.cc.i
+root/Tudou/thread/threadpool.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.i
+.PHONY : root/Tudou/thread/threadpool.cc.i
 
-root/Tudou/util.s: root/Tudou/util.cc.s
+root/Tudou/thread/threadpool.s: root/Tudou/thread/threadpool.cc.s
 
-.PHONY : root/Tudou/util.s
+.PHONY : root/Tudou/thread/threadpool.s
 
 # target to generate assembly for a file
-root/Tudou/util.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util.cc.s
-.PHONY : root/Tudou/util.cc.s
+root/Tudou/thread/threadpool.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.s
+.PHONY : root/Tudou/thread/threadpool.cc.s
+
+root/Tudou/util/buffer.o: root/Tudou/util/buffer.cc.o
+
+.PHONY : root/Tudou/util/buffer.o
+
+# target to build an object file
+root/Tudou/util/buffer.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o
+.PHONY : root/Tudou/util/buffer.cc.o
+
+root/Tudou/util/buffer.i: root/Tudou/util/buffer.cc.i
+
+.PHONY : root/Tudou/util/buffer.i
+
+# target to preprocess a source file
+root/Tudou/util/buffer.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.i
+.PHONY : root/Tudou/util/buffer.cc.i
+
+root/Tudou/util/buffer.s: root/Tudou/util/buffer.cc.s
+
+.PHONY : root/Tudou/util/buffer.s
+
+# target to generate assembly for a file
+root/Tudou/util/buffer.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.s
+.PHONY : root/Tudou/util/buffer.cc.s
+
+root/Tudou/util/error.o: root/Tudou/util/error.cc.o
+
+.PHONY : root/Tudou/util/error.o
+
+# target to build an object file
+root/Tudou/util/error.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o
+.PHONY : root/Tudou/util/error.cc.o
+
+root/Tudou/util/error.i: root/Tudou/util/error.cc.i
+
+.PHONY : root/Tudou/util/error.i
+
+# target to preprocess a source file
+root/Tudou/util/error.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.i
+.PHONY : root/Tudou/util/error.cc.i
+
+root/Tudou/util/error.s: root/Tudou/util/error.cc.s
+
+.PHONY : root/Tudou/util/error.s
+
+# target to generate assembly for a file
+root/Tudou/util/error.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.s
+.PHONY : root/Tudou/util/error.cc.s
+
+root/Tudou/util/timer.o: root/Tudou/util/timer.cc.o
+
+.PHONY : root/Tudou/util/timer.o
+
+# target to build an object file
+root/Tudou/util/timer.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o
+.PHONY : root/Tudou/util/timer.cc.o
+
+root/Tudou/util/timer.i: root/Tudou/util/timer.cc.i
+
+.PHONY : root/Tudou/util/timer.i
+
+# target to preprocess a source file
+root/Tudou/util/timer.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.i
+.PHONY : root/Tudou/util/timer.cc.i
+
+root/Tudou/util/timer.s: root/Tudou/util/timer.cc.s
+
+.PHONY : root/Tudou/util/timer.s
+
+# target to generate assembly for a file
+root/Tudou/util/timer.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.s
+.PHONY : root/Tudou/util/timer.cc.s
+
+root/Tudou/util/util.o: root/Tudou/util/util.cc.o
+
+.PHONY : root/Tudou/util/util.o
+
+# target to build an object file
+root/Tudou/util/util.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o
+.PHONY : root/Tudou/util/util.cc.o
+
+root/Tudou/util/util.i: root/Tudou/util/util.cc.i
+
+.PHONY : root/Tudou/util/util.i
+
+# target to preprocess a source file
+root/Tudou/util/util.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.i
+.PHONY : root/Tudou/util/util.cc.i
+
+root/Tudou/util/util.s: root/Tudou/util/util.cc.s
+
+.PHONY : root/Tudou/util/util.s
+
+# target to generate assembly for a file
+root/Tudou/util/util.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.s
+.PHONY : root/Tudou/util/util.cc.s
 
 test_httpserver.o: test_httpserver.cc.o
 
@@ -570,45 +651,54 @@ help:
 	@echo "... httpserver.o"
 	@echo "... httpserver.i"
 	@echo "... httpserver.s"
-	@echo "... root/Tudou/buffer.o"
-	@echo "... root/Tudou/buffer.i"
-	@echo "... root/Tudou/buffer.s"
-	@echo "... root/Tudou/channel.o"
-	@echo "... root/Tudou/channel.i"
-	@echo "... root/Tudou/channel.s"
-	@echo "... root/Tudou/error.o"
-	@echo "... root/Tudou/error.i"
-	@echo "... root/Tudou/error.s"
-	@echo "... root/Tudou/event.o"
-	@echo "... root/Tudou/event.i"
-	@echo "... root/Tudou/event.s"
-	@echo "... root/Tudou/eventlooppool.o"
-	@echo "... root/Tudou/eventlooppool.i"
-	@echo "... root/Tudou/eventlooppool.s"
-	@echo "... root/Tudou/pipe.o"
-	@echo "... root/Tudou/pipe.i"
-	@echo "... root/Tudou/pipe.s"
-	@echo "... root/Tudou/socket.o"
-	@echo "... root/Tudou/socket.i"
-	@echo "... root/Tudou/socket.s"
-	@echo "... root/Tudou/taskqueue.o"
-	@echo "... root/Tudou/taskqueue.i"
-	@echo "... root/Tudou/taskqueue.s"
-	@echo "... root/Tudou/tcpconnection.o"
-	@echo "... root/Tudou/tcpconnection.i"
-	@echo "... root/Tudou/tcpconnection.s"
-	@echo "... root/Tudou/threadgroup.o"
-	@echo "... root/Tudou/threadgroup.i"
-	@echo "... root/Tudou/threadgroup.s"
-	@echo "... root/Tudou/threadpool.o"
-	@echo "... root/Tudou/threadpool.i"
-	@echo "... root/Tudou/threadpool.s"
-	@echo "... root/Tudou/timer.o"
-	@echo "... root/Tudou/timer.i"
-	@echo "... root/Tudou/timer.s"
-	@echo "... root/Tudou/util.o"
-	@echo "... root/Tudou/util.i"
-	@echo "... root/Tudou/util.s"
+	@echo "... root/Tudou/log/blockqueue.o"
+	@echo "... root/Tudou/log/blockqueue.i"
+	@echo "... root/Tudou/log/blockqueue.s"
+	@echo "... root/Tudou/log/log.o"
+	@echo "... root/Tudou/log/log.i"
+	@echo "... root/Tudou/log/log.s"
+	@echo "... root/Tudou/net/socket.o"
+	@echo "... root/Tudou/net/socket.i"
+	@echo "... root/Tudou/net/socket.s"
+	@echo "... root/Tudou/net/tcpconnection.o"
+	@echo "... root/Tudou/net/tcpconnection.i"
+	@echo "... root/Tudou/net/tcpconnection.s"
+	@echo "... root/Tudou/poller/channel.o"
+	@echo "... root/Tudou/poller/channel.i"
+	@echo "... root/Tudou/poller/channel.s"
+	@echo "... root/Tudou/poller/epoll.o"
+	@echo "... root/Tudou/poller/epoll.i"
+	@echo "... root/Tudou/poller/epoll.s"
+	@echo "... root/Tudou/poller/event.o"
+	@echo "... root/Tudou/poller/event.i"
+	@echo "... root/Tudou/poller/event.s"
+	@echo "... root/Tudou/poller/eventlooppool.o"
+	@echo "... root/Tudou/poller/eventlooppool.i"
+	@echo "... root/Tudou/poller/eventlooppool.s"
+	@echo "... root/Tudou/poller/pipe.o"
+	@echo "... root/Tudou/poller/pipe.i"
+	@echo "... root/Tudou/poller/pipe.s"
+	@echo "... root/Tudou/thread/taskqueue.o"
+	@echo "... root/Tudou/thread/taskqueue.i"
+	@echo "... root/Tudou/thread/taskqueue.s"
+	@echo "... root/Tudou/thread/threadgroup.o"
+	@echo "... root/Tudou/thread/threadgroup.i"
+	@echo "... root/Tudou/thread/threadgroup.s"
+	@echo "... root/Tudou/thread/threadpool.o"
+	@echo "... root/Tudou/thread/threadpool.i"
+	@echo "... root/Tudou/thread/threadpool.s"
+	@echo "... root/Tudou/util/buffer.o"
+	@echo "... root/Tudou/util/buffer.i"
+	@echo "... root/Tudou/util/buffer.s"
+	@echo "... root/Tudou/util/error.o"
+	@echo "... root/Tudou/util/error.i"
+	@echo "... root/Tudou/util/error.s"
+	@echo "... root/Tudou/util/timer.o"
+	@echo "... root/Tudou/util/timer.i"
+	@echo "... root/Tudou/util/timer.s"
+	@echo "... root/Tudou/util/util.o"
+	@echo "... root/Tudou/util/util.i"
+	@echo "... root/Tudou/util/util.s"
 	@echo "... test_httpserver.o"
 	@echo "... test_httpserver.i"
 	@echo "... test_httpserver.s"

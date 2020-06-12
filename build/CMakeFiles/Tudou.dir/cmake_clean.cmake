@@ -1,11 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Tudou.dir/test_tcpclient.cc.o"
-  "CMakeFiles/Tudou.dir/event.cc.o"
-  "CMakeFiles/Tudou.dir/util.cc.o"
-  "CMakeFiles/Tudou.dir/channel.cc.o"
-  "CMakeFiles/Tudou.dir/timer.cc.o"
-  "CMakeFiles/Tudou.dir/eventlooppool.cc.o"
-  "CMakeFiles/Tudou.dir/tcpconnection.cc.o"
+  "CMakeFiles/Tudou.dir/main.cpp.o"
   "Tudou.pdb"
   "Tudou"
 )

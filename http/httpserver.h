@@ -2,8 +2,9 @@
 #define __TUDOU_HTTPSERVER_H__
 
 #include "httprequest.h"
-#include "../tcpconnection.h"
-#include "../buffer.h"
+#include "../net/tcpconnection.h"
+#include "../util/buffer.h"
+#include "../log/log.h"
 
 namespace tudou
 {

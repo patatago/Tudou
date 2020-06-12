@@ -12,8 +12,10 @@
 #include <iostream>
 #include <sys/mman.h>
 #include <utility>
-#include "../tcpconnection.h"
-#include "../buffer.h"
+#include "../net/tcpconnection.h"
+#include "../util/buffer.h"
+#include "../log/log.h"
+
 using std::map;
 using std::string;
 using std::stringstream;

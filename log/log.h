@@ -4,8 +4,8 @@
 #include <string>
 #include "blockqueue.h"
 #include <thread>
-#include "../util.h"
-#include "../threadgroup.h"
+#include "../util/util.h"
+#include "../thread/threadgroup.h"
 #include <memory>
 #include <iostream>
 #include <string>
@@ -147,11 +147,11 @@ private:
 };
 
 //unique_ptr<Log> Log::_pInstance = nullptr;
-#define Trace LogEvent(LogLevel::Trace, __FILE__,__FUNCTION__, __LINE__)
+#define Trace LogEvent(LogLevel::TRACE, __FILE__,__FUNCTION__, __LINE__)
 #define Debug LogEvent(LogLevel::DEBUG, __FILE__,__FUNCTION__, __LINE__)
 #define Info LogEvent(LogLevel::INFO, __FILE__,__FUNCTION__, __LINE__)
 #define Warn LogEvent(LogLevel::WARN, __FILE__,__FUNCTION__, __LINE__)
-#define Error LogEvent(LogLevel::ERROR, __FILE__,__FUNCTION__, __LINE__)
+// /#define Error LogEvent(LogLevel::ERROR, __FILE__,__FUNCTION__, __LINE__) //与error.h冲突，删除
 #define Fatal LogEvent(LogLevel::FATAL, __FILE__,__FUNCTION__, __LINE__)
 #define Loglevel(level) Log::getInstance().setLogLevel(level)
 

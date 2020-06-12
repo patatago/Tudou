@@ -102,6 +102,7 @@ bool HttpParse::parseRequestLine(int len, Buffer &buffer)
     //开始解析http版本
     if(!equal(&_message_line[pos2+1], &_message_line[pos2 + 7], "HTTP/1."))
     {
+        Debug << "HTTP version parse error" << std::endl;
         return false;
     }
     if(_message_line[pos2 + 8] == '1')
@@ -114,6 +115,7 @@ bool HttpParse::parseRequestLine(int len, Buffer &buffer)
     }
     else
     {
+        Debug << "HTTP version parse error" << std::endl;
         return false;
     }
     return true;
@@ -122,11 +124,11 @@ bool HttpParse::parseRequestLine(int len, Buffer &buffer)
 bool HttpParse::parseRequestHead(int len, Buffer &buffer)
 {
     string _message_line = buffer.read(len - buffer.getReadPos() + 2); //读出请求头
-    //std::cout << "_messagehttp: " << _message_line << std::endl; 
     auto pos = _message_line.find(':'); //找到：
     
     if(pos == string::npos)
     {
+        Debug << "beginning to parse body" << std::endl;
         return false;
     }
     _message.addHeader(string(&_message_line[0], pos), 
@@ -241,7 +243,6 @@ void HttpResponse::clientError(const string &cause, const string &errnum, const 
     aa << "Content-length: " << ss.str().size() << "\r\n\r\n";
     _buffer.append(aa.str());
     _buffer.append(ss.str());
-    //std::cout << aa.str() << ss.str() << std::endl;
 }
 
 void HttpResponse::append()
@@ -292,7 +293,6 @@ void HttpResponse::append()
         _buffer.append(buf, nread);
         len -= nread;
     }
-    //std::cout <<"----------++-------"<<_buffer.size() << std::endl;
     close(srcfd);
 }
 

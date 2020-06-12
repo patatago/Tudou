@@ -2,7 +2,7 @@
 
 using namespace tudou;
 	
-explicit BlockQueue::BlockQueue(unsigned int size)
+BlockQueue::BlockQueue(unsigned int size)
 : _max_queue_size(size)
 {}
 
@@ -81,9 +81,7 @@ bool BlockQueue::push(const LogPair &recv)
         _condition.notify_all();
         return false;
     }
-//	pair<string, string> ff = log;
     _block_queue.push_back(recv);
-    //std::cout<<log.second<<std::endl;
     _condition.notify_all();
     return true;
     

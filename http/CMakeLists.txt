@@ -3,6 +3,10 @@ cmake_minimum_required(VERSION 3.14.0-rc2)
 project(Tudou)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++11 -pthread -g -march=native")
 
-add_executable(Tudou ../util.cc ../threadgroup.cc ../socket.cc ../threadpool.cc  ../eventlooppool.cc  ../tcpconnection.cc ../buffer.cc
-                ../channel.cc ../error.cc ../event.cc ../pipe.cc  ../taskqueue.cc 
-                 ../timer.cc ./httprequest.cc ./httpserver.cc test_httpserver.cc)
+add_executable(Tudou ../util/util.cc ../thread/threadgroup.cc 
+                ../util/error.cc
+                ../log/log.cc ../log/blockqueue.cc
+                ../net/socket.cc ../thread/threadpool.cc  
+                ../poller/eventlooppool.cc  ../net/tcpconnection.cc ../util/buffer.cc
+                ../poller/epoll.cc ../poller/channel.cc  ../poller/event.cc ../poller/pipe.cc  ../thread/taskqueue.cc 
+                 ../util/timer.cc ./httprequest.cc ./httpserver.cc test_httpserver.cc)

@@ -57,178 +57,217 @@ include CMakeFiles/Tudou.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Tudou.dir/flags.make
 
-CMakeFiles/Tudou.dir/root/Tudou/util.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/util.cc.o: /root/Tudou/util.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/util.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/util.cc.o -c /root/Tudou/util.cc
+CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o: /root/Tudou/util/util.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o -c /root/Tudou/util/util.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/util.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/util.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/util.cc > CMakeFiles/Tudou.dir/root/Tudou/util.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/util/util.cc > CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/util.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/util.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/util.cc -o CMakeFiles/Tudou.dir/root/Tudou/util.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/util/util.cc -o CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o: /root/Tudou/threadgroup.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o -c /root/Tudou/threadgroup.cc
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o: /root/Tudou/thread/threadgroup.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o -c /root/Tudou/thread/threadgroup.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/threadgroup.cc > CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/thread/threadgroup.cc > CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/threadgroup.cc -o CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/thread/threadgroup.cc -o CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o: /root/Tudou/socket.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o -c /root/Tudou/socket.cc
+CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o: /root/Tudou/util/error.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o -c /root/Tudou/util/error.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/socket.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/socket.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/socket.cc > CMakeFiles/Tudou.dir/root/Tudou/socket.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/util/error.cc > CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/socket.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/socket.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/socket.cc -o CMakeFiles/Tudou.dir/root/Tudou/socket.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/util/error.cc -o CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o: /root/Tudou/threadpool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o -c /root/Tudou/threadpool.cc
+CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o: /root/Tudou/log/log.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o -c /root/Tudou/log/log.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/threadpool.cc > CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/log/log.cc > CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/threadpool.cc -o CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/log/log.cc -o CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o: /root/Tudou/eventlooppool.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o -c /root/Tudou/eventlooppool.cc
+CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o: /root/Tudou/log/blockqueue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o -c /root/Tudou/log/blockqueue.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/eventlooppool.cc > CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/log/blockqueue.cc > CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/eventlooppool.cc -o CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/log/blockqueue.cc -o CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o: /root/Tudou/tcpconnection.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o -c /root/Tudou/tcpconnection.cc
+CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o: /root/Tudou/net/socket.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o -c /root/Tudou/net/socket.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/tcpconnection.cc > CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/net/socket.cc > CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/tcpconnection.cc -o CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/net/socket.cc -o CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o: /root/Tudou/buffer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o -c /root/Tudou/buffer.cc
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o: /root/Tudou/thread/threadpool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o -c /root/Tudou/thread/threadpool.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/buffer.cc > CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/thread/threadpool.cc > CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/buffer.cc -o CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/thread/threadpool.cc -o CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o: /root/Tudou/channel.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o -c /root/Tudou/channel.cc
+CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o: /root/Tudou/poller/eventlooppool.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o -c /root/Tudou/poller/eventlooppool.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/channel.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/channel.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/channel.cc > CMakeFiles/Tudou.dir/root/Tudou/channel.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/poller/eventlooppool.cc > CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/channel.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/channel.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/channel.cc -o CMakeFiles/Tudou.dir/root/Tudou/channel.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/poller/eventlooppool.cc -o CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/error.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/error.cc.o: /root/Tudou/error.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/error.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/error.cc.o -c /root/Tudou/error.cc
+CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o: /root/Tudou/net/tcpconnection.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o -c /root/Tudou/net/tcpconnection.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/error.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/error.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/error.cc > CMakeFiles/Tudou.dir/root/Tudou/error.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/net/tcpconnection.cc > CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/error.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/error.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/error.cc -o CMakeFiles/Tudou.dir/root/Tudou/error.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/net/tcpconnection.cc -o CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/event.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/event.cc.o: /root/Tudou/event.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/event.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/event.cc.o -c /root/Tudou/event.cc
+CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o: /root/Tudou/util/buffer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o -c /root/Tudou/util/buffer.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/event.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/event.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/event.cc > CMakeFiles/Tudou.dir/root/Tudou/event.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/util/buffer.cc > CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/event.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/event.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/event.cc -o CMakeFiles/Tudou.dir/root/Tudou/event.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/util/buffer.cc -o CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o: /root/Tudou/pipe.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o -c /root/Tudou/pipe.cc
+CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o: /root/Tudou/poller/epoll.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o -c /root/Tudou/poller/epoll.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/pipe.cc > CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/poller/epoll.cc > CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/pipe.cc -o CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/poller/epoll.cc -o CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o: /root/Tudou/taskqueue.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o -c /root/Tudou/taskqueue.cc
+CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o: /root/Tudou/poller/channel.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o -c /root/Tudou/poller/channel.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/taskqueue.cc > CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/poller/channel.cc > CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/taskqueue.cc -o CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/poller/channel.cc -o CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.s
 
-CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: CMakeFiles/Tudou.dir/flags.make
-CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o: /root/Tudou/timer.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o -c /root/Tudou/timer.cc
+CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o: /root/Tudou/poller/event.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o -c /root/Tudou/poller/event.cc
 
-CMakeFiles/Tudou.dir/root/Tudou/timer.cc.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/timer.cc.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/timer.cc > CMakeFiles/Tudou.dir/root/Tudou/timer.cc.i
+CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/poller/event.cc > CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.i
 
-CMakeFiles/Tudou.dir/root/Tudou/timer.cc.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/timer.cc.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/timer.cc -o CMakeFiles/Tudou.dir/root/Tudou/timer.cc.s
+CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/poller/event.cc -o CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.s
+
+CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o: /root/Tudou/poller/pipe.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o -c /root/Tudou/poller/pipe.cc
+
+CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/poller/pipe.cc > CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.i
+
+CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/poller/pipe.cc -o CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.s
+
+CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o: /root/Tudou/thread/taskqueue.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o -c /root/Tudou/thread/taskqueue.cc
+
+CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/thread/taskqueue.cc > CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.i
+
+CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/thread/taskqueue.cc -o CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.s
+
+CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o: CMakeFiles/Tudou.dir/flags.make
+CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o: /root/Tudou/util/timer.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o -c /root/Tudou/util/timer.cc
+
+CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /root/Tudou/util/timer.cc > CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.i
+
+CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /root/Tudou/util/timer.cc -o CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.s
 
 CMakeFiles/Tudou.dir/httprequest.cc.o: CMakeFiles/Tudou.dir/flags.make
 CMakeFiles/Tudou.dir/httprequest.cc.o: httprequest.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Tudou.dir/httprequest.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/Tudou.dir/httprequest.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/httprequest.cc.o -c /root/Tudou/http/httprequest.cc
 
 CMakeFiles/Tudou.dir/httprequest.cc.i: cmake_force
@@ -241,7 +280,7 @@ CMakeFiles/Tudou.dir/httprequest.cc.s: cmake_force
 
 CMakeFiles/Tudou.dir/httpserver.cc.o: CMakeFiles/Tudou.dir/flags.make
 CMakeFiles/Tudou.dir/httpserver.cc.o: httpserver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/Tudou.dir/httpserver.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/Tudou.dir/httpserver.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/httpserver.cc.o -c /root/Tudou/http/httpserver.cc
 
 CMakeFiles/Tudou.dir/httpserver.cc.i: cmake_force
@@ -254,7 +293,7 @@ CMakeFiles/Tudou.dir/httpserver.cc.s: cmake_force
 
 CMakeFiles/Tudou.dir/test_httpserver.cc.o: CMakeFiles/Tudou.dir/flags.make
 CMakeFiles/Tudou.dir/test_httpserver.cc.o: test_httpserver.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/Tudou.dir/test_httpserver.cc.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/Tudou.dir/test_httpserver.cc.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Tudou.dir/test_httpserver.cc.o -c /root/Tudou/http/test_httpserver.cc
 
 CMakeFiles/Tudou.dir/test_httpserver.cc.i: cmake_force
@@ -267,19 +306,22 @@ CMakeFiles/Tudou.dir/test_httpserver.cc.s: cmake_force
 
 # Object files for target Tudou
 Tudou_OBJECTS = \
-"CMakeFiles/Tudou.dir/root/Tudou/util.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/error.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/event.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o" \
-"CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o" \
+"CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o" \
 "CMakeFiles/Tudou.dir/httprequest.cc.o" \
 "CMakeFiles/Tudou.dir/httpserver.cc.o" \
 "CMakeFiles/Tudou.dir/test_httpserver.cc.o"
@@ -287,25 +329,28 @@ Tudou_OBJECTS = \
 # External object files for target Tudou
 Tudou_EXTERNAL_OBJECTS =
 
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/util.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/error.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/event.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o
-Tudou: CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/thread/threadgroup.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/log/log.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/log/blockqueue.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/net/socket.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/thread/threadpool.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/poller/eventlooppool.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/net/tcpconnection.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/util/buffer.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/poller/epoll.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/poller/channel.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/poller/event.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/poller/pipe.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/thread/taskqueue.cc.o
+Tudou: CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o
 Tudou: CMakeFiles/Tudou.dir/httprequest.cc.o
 Tudou: CMakeFiles/Tudou.dir/httpserver.cc.o
 Tudou: CMakeFiles/Tudou.dir/test_httpserver.cc.o
 Tudou: CMakeFiles/Tudou.dir/build.make
 Tudou: CMakeFiles/Tudou.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking CXX executable Tudou"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/root/Tudou/http/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Linking CXX executable Tudou"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Tudou.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -19,10 +19,9 @@ void HttpServer::readCb(const TcpConnection::Ptr & ptr)
     HttpResponse to(_parse.getHttpMessage(), "tudou", out);
     to.append();
     ptr->send(out);
-    // if(!ptr->getOutput()->size())
-    // 	ptr->getChannel()->close();
     if(!flag)
     {
+        Debug << "HTTP parse error" << std::endl;
         _in->reset();
     }
     

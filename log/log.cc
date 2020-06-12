@@ -45,7 +45,7 @@ void LogEvent::format()
 	_full_text << _message.str() << std::endl;
 }
 
-LogEvent::~LogEvent() { std::cout << std::endl; }
+LogEvent::~LogEvent() {}
 const string LogEvent::getFullText()
 {
 	format();
