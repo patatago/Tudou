@@ -134,6 +134,10 @@ util.h
 unistd.h
 -
 
+/root/Tudou/socket.cc
+socket.h
+/root/Tudou/socket.h
+
 /root/Tudou/socket.h
 error.h
 /root/Tudou/error.h

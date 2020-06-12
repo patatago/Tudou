@@ -4,10 +4,19 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/root/Tudou/http/httprequest.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/httprequest.cc.o"
+  "/root/Tudou/http/httpserver.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/httpserver.cc.o"
+  "/root/Tudou/buffer.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/buffer.cc.o"
   "/root/Tudou/channel.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/channel.cc.o"
+  "/root/Tudou/error.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/error.cc.o"
   "/root/Tudou/event.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/event.cc.o"
   "/root/Tudou/eventlooppool.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/eventlooppool.cc.o"
+  "/root/Tudou/pipe.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/pipe.cc.o"
+  "/root/Tudou/socket.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/socket.cc.o"
+  "/root/Tudou/taskqueue.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/taskqueue.cc.o"
   "/root/Tudou/tcpconnection.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/tcpconnection.cc.o"
+  "/root/Tudou/threadgroup.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/threadgroup.cc.o"
+  "/root/Tudou/threadpool.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/threadpool.cc.o"
   "/root/Tudou/timer.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/timer.cc.o"
   "/root/Tudou/util.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/util.cc.o"
   "/root/Tudou/http/test_httpserver.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/test_httpserver.cc.o"
