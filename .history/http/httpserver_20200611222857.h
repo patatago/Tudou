@@ -22,23 +22,23 @@ public:
 	, _server(nullptr)
 	{}
 	
-	void readCb(const TcpConnection::Ptr & ptr)
-	{
-		auto _in = ptr->getInput();	//拿到http请求
-		HttpParse _parse;
-		auto flag = _parse.parse(*_in);
-		Buffer out;
-		HttpResponse to(_parse.getHttpMessage(), "tudou", out);
-		to.append();
-		ptr->send(out);
-		// if(!ptr->getOutput()->size())
-		// 	ptr->getChannel()->close();
-		if(!flag)
-		{
-			_in->reset();
-		}
-		
-	}
+void readCb(const TcpConnection::Ptr & ptr)
+{
+	auto _in = ptr->getInput();	//拿到http请求
+	HttpParse _parse;
+	//  std::cout <<"------------------"<<std::endl;
+	// std::cout << _in->begin() << std::endl;
+	// std::cout << "------------------" << std::endl;
+	auto flag = _parse.parse(*_in);
+	
+	Buffer out = *(ptr->getOutput());
+	HttpResponse to(_parse.getHttpMessage(), "tudou", out);
+	
+	to.append();
+	ptr->send(out.begin(), out.size());
+	if(!flag)	ptr->getChannel()->close();
+	
+}
 
 	void start() //最后一个参数是线程池所创建的线程
 	{

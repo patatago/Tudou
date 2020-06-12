@@ -9,6 +9,7 @@ Channel::Channel(EventLoop* loop,  int fd)
 {
 	_event = EPOLLIN | EPOLLET;
 	setNonBlock(fd);
+	//SocketTool::setCloseOnExec(fd);
 	_loop->addChannel(this);
 }
 
@@ -60,6 +61,7 @@ Epoll::~Epoll()
 {
 	for(auto i = _active_channel.begin(); i!=_active_channel.end(); ++i)
 	{
+		std::cout << "close" << std::endl;
 		(*i)->close();
 	}
 	close(_epoll_root);

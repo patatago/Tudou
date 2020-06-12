@@ -240,7 +240,7 @@ public:
 				break;	
 			}
 		}
-		
+		//std::cout << "read size :" << buffer.size() << std::endl;
 		return true;
 	}
 	

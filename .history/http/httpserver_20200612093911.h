@@ -31,8 +31,7 @@ public:
 		HttpResponse to(_parse.getHttpMessage(), "tudou", out);
 		to.append();
 		ptr->send(out);
-		// if(!ptr->getOutput()->size())
-		// 	ptr->getChannel()->close();
+		ptr->getChannel()->close();
 		if(!flag)
 		{
 			_in->reset();

@@ -245,6 +245,7 @@ public:
 	static pair<Error, int>
 	sendPart(int sockfd, const char *msg, size_t len)
 	{
+		errno = 0;
 		int ret = 0, part = 0;
 		Error _error(Error::OK, "send ok");
 		while(1)

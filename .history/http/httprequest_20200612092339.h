@@ -234,13 +234,19 @@ public:
 			}
 			else if(_state == PARSE_BODY)
 			{
-				/*
-					暂时只支持get
-				*/
+				// findPos = buffer.find();
+				// if(findPos == -1)
+				// {
+				// 	//std::cout << "read size :" << buffer.size() << std::endl;
+				// 	return false; //解析失败
+				// }
+				// auto pos = buffer.find();
+				// string _message_line = buffer.read(pos - buffer.getReadPos() + 2); //读出请求头
+				// _message.setBody(_message_line);
 				break;	
 			}
 		}
-		
+		//std::cout << "read size :" << buffer.size() << std::endl;
 		return true;
 	}
 	

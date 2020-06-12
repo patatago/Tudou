@@ -245,6 +245,7 @@ public:
 	static pair<Error, int>
 	sendPart(int sockfd, const char *msg, size_t len)
 	{
+		errno = 0;
 		int ret = 0, part = 0;
 		Error _error(Error::OK, "send ok");
 		while(1)
@@ -261,21 +262,17 @@ public:
 					_error.setErrno(errno);
 					return make_pair(_error, -2);
 				}
-				else if(errno == EAGAIN || errno == EWOULDBLOCK)
+				else if(errno == EAGAIN)
 				{
 					_error.setErrno(errno);
-					return make_pair(_error, part);  //缓冲区满
+					return make_pair(_error, part);  //全部发送
 				}
 				else
-				{		
+				{	
+					
 					return make_pair(_error, part);
 				}
 				
-			}
-			else if(ret == 0)
-			{
-				_error.setErrno(errno);
-				return make_pair(_error, -1);
 			}
 			else
 			{

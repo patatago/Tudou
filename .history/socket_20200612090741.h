@@ -245,6 +245,7 @@ public:
 	static pair<Error, int>
 	sendPart(int sockfd, const char *msg, size_t len)
 	{
+		errno = 0;
 		int ret = 0, part = 0;
 		Error _error(Error::OK, "send ok");
 		while(1)
@@ -289,10 +290,48 @@ public:
 
 
 	static pair<Error, int>
-	sendPart(int sockfd, Buffer &_buffer)
+	sendPart(int sockfd, Buffer &buffer)
 	{
 		//尽可能全部发送
-		return sendPart(sockfd, _buffer.begin(), _buffer.size());
+		int count = 0, len = buffer.size();
+		Error _error(Error::OK, "send ok");
+		int ret = 0, part = 0; //ret表示写成功的字符数， part表示总共发送了多少
+		while(1)
+		{
+			ret = ::write(sockfd, _buffer.begin() + part, len - part);
+			if(ret <= 0)
+			{
+				//错误/断连-1，epipe-2，
+				if(errno == EINTR)
+				{
+					continue;
+				}
+				else if(errno == EAGAIN)
+				{
+					return make_pair(_error, part);
+				}
+				else if(errno == EPIPE) 
+				{ 
+					_error.setErrno(errno);
+					make_pair(_error, -2);
+				}
+				else
+				{
+					_error.setType(Error::ERROR);
+					return make_pair(_error, -1);
+				}
+				
+			}
+			else
+			{
+				_buffer.consume(ret);
+				part += ret;
+			}
+			
+		}
+
+
+		//return sendPart(sockfd, _buffer.begin(), _buffer.size());
 		
 	}
 

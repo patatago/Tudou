@@ -74,6 +74,41 @@ int TcpConnection::send(const string &msg) {  send(msg.c_str(), msg.size()); }
     2. 若有数据就append到缓冲区
     3. 没全部发完把剩下的append到缓冲区
 */
+// int TcpConnection::send(const char *msg, size_t len)
+// {
+//     if(_channel)
+//     {
+//         if(!_output.empty()) //输出缓冲区有数据还没有发送
+//         {
+//             _output.append(msg, len);
+//             if(!_channel->isWrite()) { _channel->enableWrite(true);}
+//             return 0;
+//         }
+//         //尝试直接发送
+    
+//         auto ret = SocketTool::sendPart(_channel->getFd(), msg, len);
+
+//         auto &_err = ret.first;
+//         if(ret.second == 0)
+//         {
+//             return -1; //发送不成功
+//         }
+//         if(ret.second == len)
+//         {
+//             return len; //全部发送成功
+//         }
+   
+//         _output.append(msg+ret.second, len-ret.second); //剩下的加入缓冲区
+//         if(!_channel->isWrite()) {_channel->enableWrite(true);}
+//         return 1;
+//     }
+//     return -1;
+// }
+/*
+    1. 缓冲区没有数据尝试直接::write
+    2. 若有数据就append到缓冲区
+    3. 没全部发完把剩下的append到缓冲区
+*/
 
 int TcpConnection::send(const char *msg, size_t len)
 {
@@ -139,7 +174,8 @@ void TcpConnection::shutdown()
 //处理读事件,如果使用lt模式，有数据就会一直触发
 void TcpConnection::handleRead(const Ptr &ptr)
 {	
-    unique_lock<mutex> lck(_mutex);
+   // std::cout << "begin" << std::endl;
+    //unique_lock<mutex> lck(_mutex);
     if(_state == TcpConnection::HANDSHAKING && !handleHandshake(ptr)) //判断是否链接
     {
         return ;
