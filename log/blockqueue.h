@@ -4,6 +4,7 @@
 #include <iostream>
 #include <thread>
 #include <chrono>
+#include <atomic>
 #include <mutex>
 #include <condition_variable>
 #include <list>
@@ -33,7 +34,7 @@ public:
 	bool pop(LogPair &log);
 	
 	bool pop(LogPair &log, int timeSecond);
-	
+	void shutdown();
 	~BlockQueue();
 
 
@@ -42,6 +43,7 @@ private:
     std::list<pair<string, string>> _block_queue;
 	condition_variable_any _condition;
     unsigned int _max_queue_size;
+    atomic<bool> _is_exit;
 };
 
 }

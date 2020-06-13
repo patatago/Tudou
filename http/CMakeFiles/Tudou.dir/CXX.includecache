@@ -6,10 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/root/Tudou/http/httprequest.cc
-httprequest.h
-/root/Tudou/http/httprequest.h
-
 /root/Tudou/http/httprequest.h
 mutex
 -
@@ -67,7 +63,11 @@ errno.h
 /root/Tudou/log/log.h
 signal.h
 -
+../util/signal.h
+/root/Tudou/util/signal.h
 string.h
+-
+semaphore.h
 -
 
 /root/Tudou/log/blockqueue.h
@@ -76,6 +76,8 @@ iostream
 thread
 -
 chrono
+-
+atomic
 -
 mutex
 -
@@ -164,10 +166,6 @@ utility
 ../util/util.h
 /root/Tudou/util/util.h
 
-/root/Tudou/net/tcpconnection.cc
-tcpconnection.h
-/root/Tudou/net/tcpconnection.h
-
 /root/Tudou/net/tcpconnection.h
 ../poller/event.h
 /root/Tudou/poller/event.h
@@ -202,10 +200,6 @@ mutex
 functional
 -
 
-/root/Tudou/poller/channel.cc
-channel.h
-/root/Tudou/poller/channel.h
-
 /root/Tudou/poller/channel.h
 event.h
 /root/Tudou/poller/event.h
@@ -228,10 +222,6 @@ memory
 epoll.h
 /root/Tudou/poller/epoll.h
 
-/root/Tudou/poller/epoll.cc
-epoll.h
-/root/Tudou/poller/epoll.h
-
 /root/Tudou/poller/epoll.h
 sys/epoll.h
 -
@@ -251,12 +241,6 @@ channel.h
 /root/Tudou/poller/channel.h
 ../log/log.h
 /root/Tudou/log/log.h
-
-/root/Tudou/poller/event.cc
-event.h
-/root/Tudou/poller/event.h
-algorithm
--
 
 /root/Tudou/poller/event.h
 ../util/util.h
@@ -277,10 +261,6 @@ list
 -
 memory
 -
-
-/root/Tudou/poller/eventlooppool.cc
-eventlooppool.h
-/root/Tudou/poller/eventlooppool.h
 
 /root/Tudou/poller/eventlooppool.h
 ../thread/threadgroup.h
@@ -380,9 +360,15 @@ errno.h
 string.h
 -
 
-/root/Tudou/util/timer.cc
-timer.h
-/root/Tudou/util/timer.h
+/root/Tudou/util/signal.h
+signal.h
+-
+util.h
+/root/Tudou/util/util.h
+../log/log.h
+/root/Tudou/log/log.h
+../http/httpserver.h
+/root/Tudou/http/httpserver.h
 
 /root/Tudou/util/timer.h
 memory

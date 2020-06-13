@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/root/Tudou/build",
-  "command": "/usr/bin/g++    -g   -o CMakeFiles/Tudou.dir/main.cpp.o -c /root/Tudou/main.cpp",
-  "file": "/root/Tudou/main.cpp"
-}
-]

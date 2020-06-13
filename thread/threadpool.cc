@@ -17,7 +17,7 @@ ThreadPool::ThreadPool(size_t thread_num, size_t task_num)
 
 void ThreadPool::run()
 {
-    while(1)
+    while(!_is_exit)
     {
         DefaultFunction task = nullptr;
         task = _task_queue.pop();
@@ -47,9 +47,9 @@ bool ThreadPool::addTask(DefaultFunction task)
 
 void ThreadPool::shutdown()
 {
-    _task_queue.exit();
-    _thread_group.joinAll();
     _is_exit = true;
+    _task_queue.exit();
+    _thread_group.joinAll();    
 }
 
 ThreadPool::~ThreadPool()

@@ -18,7 +18,7 @@ public:
 	void readCb(const TcpConnection::Ptr & ptr);
 
 	void start();
-	
+	void shutdown();
 
 private:
     const string _host;

@@ -37,7 +37,7 @@ public:
 	~EventLoopPool();
 	
 	EventLoop::Ptr choose();
-
+	void shutdown();
 	static EventLoopPool &getInstance(EventLoop::Ptr ptr = nullptr, size_t threadnum = 0);
 private:
 	size_t _thread_num; //线程个数

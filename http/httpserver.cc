@@ -19,6 +19,10 @@ void HttpServer::readCb(const TcpConnection::Ptr & ptr)
     HttpResponse to(_parse.getHttpMessage(), "tudou", out);
     to.append();
     ptr->send(out);
+
+    // if(!ptr->getOutput()->size())
+    // 	ptr->getChannel()->close();
+
     if(!flag)
     {
         Debug << "HTTP parse error" << std::endl;
@@ -33,4 +37,11 @@ void HttpServer::start() //最后一个参数是线程池所创建的线程
     
     _temp_server.setReadCb([=](const TcpConnection::Ptr &con){readCb(con); });
     _server = _temp_server.start(_main_loop, _host, _port); //启动监听
+}
+
+void HttpServer::shutdown()
+{
+    _server->shutdown();
+    _thread_pool.shutdown();
+    
 }

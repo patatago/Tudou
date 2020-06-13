@@ -47,6 +47,7 @@ void EventLoop::pipeEvent()
 void EventLoop::shutdown()
 {
 	_is_exit = true;
+	wakeup();
 	if(_loop_thread)
 	{
 		_loop_thread->join();
@@ -69,7 +70,7 @@ void EventLoop::loop()
 	}
 	struct epoll_event _epoll_array[DefaultArraySize];
 	// 一直阻塞，有异步任务来的时候会解开阻塞执行异步任务
-	while(1)
+	while(!_is_exit)
 	{
 		
 		int _active_pos = epoll_wait(_epoll->_epoll_root, _epoll_array, DefaultArraySize, -1);

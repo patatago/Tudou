@@ -131,9 +131,11 @@ public:
 	void log(LogEvent &event);
 	void writeLog();
 	void setLogLevel(LogLevel::Level level);
+	void shutdown();
 private:
 	mutex _mutex_set;
 	BlockQueue _log_list;
+	atomic<bool> _is_exit;
 	ThreadGroup _log_thread_group;
 	LogLevel::Level _level;
 	static unique_ptr<Log> _pInstance;

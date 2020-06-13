@@ -30,6 +30,10 @@ DefaultFunction TaskQueue::pop()
     if(_task_queue.size() == 0)
     {
         _condition.wait(mtx); //等待通知
+        if(_is_exit)
+        {
+            return nullptr;
+        }
     }
     if(_task_queue.size())
     {
@@ -54,7 +58,7 @@ bool TaskQueue::isExit()
 void TaskQueue::exit()
 {
     _is_exit = true;
-    std::lock_guard<mutex> mtx(_mutex);
+    //std::lock_guard<mutex> mtx(_mutex);
     _condition.notify_all(); //让所有线程唤醒
 }
 

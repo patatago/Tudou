@@ -79,5 +79,14 @@ EventLoopPool &EventLoopPool::getInstance(EventLoop::Ptr ptr, size_t threadnum)
     return *_pInstance;
 }
 
+void EventLoopPool::shutdown()
+{
+    _main_eventloop->shutdown();
+    for(size_t i=0; i<_loop.size(); ++i)
+    {
+        _loop[i]->shutdown();
+    }
+    _pInstance.release();
+}
 
 unique_ptr<EventLoopPool> EventLoopPool::_pInstance = nullptr;

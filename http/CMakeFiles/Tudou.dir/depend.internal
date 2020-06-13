@@ -184,5 +184,6 @@ CMakeFiles/Tudou.dir/test_httpserver.cc.o
  /root/Tudou/thread/threadpool.h
  /root/Tudou/util/buffer.h
  /root/Tudou/util/error.h
+ /root/Tudou/util/signal.h
  /root/Tudou/util/timer.h
  /root/Tudou/util/util.h

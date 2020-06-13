@@ -4,6 +4,7 @@ using namespace tudou;
 	
 BlockQueue::BlockQueue(unsigned int size)
 : _max_queue_size(size)
+, _is_exit(false)
 {}
 
 void BlockQueue::clear() 
@@ -72,51 +73,75 @@ int BlockQueue::maxSize()
 
 bool BlockQueue::push(const LogPair &recv)
 {
-
-    int temp = size();
-    lock_guard<mutex> lock(_mutex_block_queue);
-        
-    if(temp >= _max_queue_size)
+    if(!_is_exit)
     {
+
+        int temp = size();
+        lock_guard<mutex> lock(_mutex_block_queue);
+            
+        if(temp >= _max_queue_size)
+        {
+            _condition.notify_all();
+            return false;
+        }
+        _block_queue.push_back(recv);
         _condition.notify_all();
-        return false;
+        return true;
     }
-    _block_queue.push_back(recv);
-    _condition.notify_all();
-    return true;
+    return false;
     
 }
 bool BlockQueue::pop(LogPair &log) 
 {
-    unique_lock<mutex> lock(_mutex_block_queue);
-    while(_block_queue.size() <= 0)
+    if(!_is_exit)
     {
-        _condition.wait(lock, [&, this](){return !empty();});
-        
+        unique_lock<mutex> lock(_mutex_block_queue);
+        while(_block_queue.size() <= 0)
+        {
+            _condition.wait(lock);
+            if(_is_exit)  //退出
+            {
+                return false;
+            }
+            
+        }
+        if(_block_queue.size() <=0 )
+        {
+            return false;
+        }
+        log = _block_queue.front();
+        _block_queue.pop_front();
+        return true;
     }
-    log = _block_queue.front();
-    _block_queue.pop_front();
-    return true;
+    
 }
 
-bool BlockQueue::pop(LogPair &log, int timeSecond) 
-{
+// bool BlockQueue::pop(LogPair &log) 
+// {
+//     if(!_is_exit)
+//     {
+//         int temp = size();
+//         unique_lock<mutex> lock(_mutex_block_queue);
+//         if(!temp)
+//         {
+//             _condition.wait(lock);
+
+//         }
+//     }
     
-    int temp = size();
-    unique_lock<mutex> lock(_mutex_block_queue);
-    if(!_condition.wait_for(lock, std::chrono::seconds(timeSecond), [&, temp](){return temp>0;}) )
-    {
+//     if(!_condition.wait_for(lock, std::chrono::seconds(timeSecond), [&, temp](){return temp>0;}) )
+//     {
         
-        return false;
-    }
-    if(_block_queue.size() <=0 )
-    {
-        return false;
-    }
-    log = _block_queue.front();
-    _block_queue.pop_front();
-    return true;
-}
+//         return false;
+//     }
+//     if(_block_queue.size() <=0 )
+//     {
+//         return false;
+//     }
+//     log = _block_queue.front();
+//     _block_queue.pop_front();
+//     return true;
+// }
 
 BlockQueue::~BlockQueue()
 {
@@ -126,3 +151,8 @@ BlockQueue::~BlockQueue()
     }
 }
 
+void BlockQueue::shutdown()
+{
+    _is_exit = true;
+    _condition.notify_all(); //让所有线程唤醒
+}

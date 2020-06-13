@@ -1,3 +1,0 @@
-/root/Tudou/CMakeFiles/edit_cache.dir
-/root/Tudou/CMakeFiles/rebuild_cache.dir
-/root/Tudou/CMakeFiles/Tudou.dir

@@ -130,6 +130,7 @@ Log::~Log()
 }
 Log::Log()
 : _appender(new FileLogAppender())
+, _is_exit(false)
 {
 	
 	_log_thread_group.createThread(bind(&Log::writeLog, this));
@@ -172,10 +173,10 @@ void Log::setLogLevel(LogLevel::Level level)
 }
 void Log::writeLog()
 {
-	while(1)
+	while(!_is_exit)
 	{
 		pair<string, string> ret;
-		auto flag = _log_list.pop(ret, 5);
+		auto flag = _log_list.pop(ret);
 
 		if(flag)
 		{	
@@ -188,4 +189,11 @@ void Log::writeLog()
 	}
 }
 
+void Log::shutdown()
+{
+	_is_exit = true;
+	_log_list.shutdown();
+	_pInstance.release();
+	_log_thread_group.joinAll();
+}
 unique_ptr<Log> Log::_pInstance = nullptr;
