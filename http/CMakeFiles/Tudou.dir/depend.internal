@@ -166,10 +166,8 @@ CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o
 CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o
  /root/Tudou/util/util.cc
  /root/Tudou/util/util.h
-CMakeFiles/Tudou.dir/test_tcpserver.cc.o
- /root/Tudou/http/httprequest.h
- /root/Tudou/http/httpserver.h
- /root/Tudou/http/test_tcpserver.cc
+CMakeFiles/Tudou.dir/test_tcpclient.cc.o
+ /root/Tudou/http/test_tcpclient.cc
  /root/Tudou/log/blockqueue.h
  /root/Tudou/log/log.h
  /root/Tudou/net/socket.h
@@ -184,6 +182,5 @@ CMakeFiles/Tudou.dir/test_tcpserver.cc.o
  /root/Tudou/thread/threadpool.h
  /root/Tudou/util/buffer.h
  /root/Tudou/util/error.h
- /root/Tudou/util/signal.h
  /root/Tudou/util/timer.h
  /root/Tudou/util/util.h

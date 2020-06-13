@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.14.0-rc2)
 project(Tudou)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -std=c++11 -pthread -g -march=native")
 
-add_executable(Tudou ../util/util.cc ../thread/threadgroup.cc 
+add_executable(Tudou_s ../util/util.cc ../thread/threadgroup.cc 
                 ../util/error.cc
                 ../log/log.cc ../log/blockqueue.cc
                 ../net/socket.cc ../thread/threadpool.cc  

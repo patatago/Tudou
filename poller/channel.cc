@@ -77,6 +77,7 @@ void Channel::close()
 	enableWrite(false);
 	if(_fd >= 0)
 	{
+		_loop->delChannel(this);
 		::close(_fd);
 		_fd = -1;
 		_close_cb(); 

@@ -20,7 +20,8 @@ void Epoll::addChannel(Channel* ch) //add channel的时候会把channel的文件
 	int ret = epoll_ctl(_epoll_root, EPOLL_CTL_ADD, ch->getFd(), &ev);
 	if(ret == -1)
 	{
-		Warn << "add channel to epoll error" << std::endl;
+		Warn << strerror(errno) << std::endl;
+		return ;
 	}
 	_active_channel.emplace(ch);
 

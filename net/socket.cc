@@ -140,7 +140,7 @@ SocketTool::connectTcp(const char *ip, uint16_t port, bool isasync) //客户端�
     setCloseOnExec(fd);
     noDelay(fd, true);
     int opt = ::connect(fd, (struct sockaddr*)&cli, sizeof(cli));
-    if(opt > 0)
+    if(opt == 0)
     {
         return make_pair(_error, fd);
     }

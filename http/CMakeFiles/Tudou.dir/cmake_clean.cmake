@@ -17,7 +17,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o"
   "CMakeFiles/Tudou.dir/httprequest.cc.o"
   "CMakeFiles/Tudou.dir/httpserver.cc.o"
-  "CMakeFiles/Tudou.dir/test_tcpserver.cc.o"
+  "CMakeFiles/Tudou.dir/test_tcpclient.cc.o"
   "Tudou.pdb"
   "Tudou"
 )

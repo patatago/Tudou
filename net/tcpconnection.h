@@ -50,7 +50,7 @@ public:
 	TcpConnection(EventLoop::Ptr loop, int fd);
 	
 	//connect封装
-	Ptr connection(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout = 10, const char *localIp = "0.0.0.0");
+	Ptr connection(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout = 10);
 	//设置回调函数
 	void setReadCb(const MessageCallback &cb);
 	
@@ -132,10 +132,13 @@ class TcpClient
 : public enable_shared_from_this<TcpClient>
 {
 public:
-	static TcpConnection::Ptr & start(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout = 10);
+	using Ptr = shared_ptr<TcpClient>;
+	TcpClient(EventLoop::Ptr loop, TcpConnection::Ptr conn);
+	static TcpClient::Ptr start(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout = 10);
 
 private:
-	static TcpConnection::Ptr _client;
+	TcpConnection::Ptr _connection;
+	EventLoop::Ptr _loop; //loop
 };
 
 

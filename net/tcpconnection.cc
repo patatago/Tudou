@@ -17,30 +17,24 @@ TcpConnection::TcpConnection(EventLoop::Ptr loop, int fd)
 
 
 //connect封装
-TcpConnection::Ptr TcpConnection::connection(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout, const char *localIp)
+TcpConnection::Ptr TcpConnection::connection(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout)
 {
-    Ptr _conn(new TcpConnection(loop, 0));
     _address.set(host, port);
     _timeout = timeout;
     auto nowTime = getMsec(); //当前时间
     auto ret = SocketTool::connectTcp(host.c_str(), port); //socket - bind - connect
-    switch(ret.first.getStatus())
+    if(ret.second > 0)
     {
-    case Error::OK:
-        {
-            _state = HANDSHAKING;
-            set(_loop, ret.second);
-            break;
-        }
-    default:
-        break;
+        Info << "connect have return" << std::endl;  //握手成功
+        _state = HANDSHAKING;
+        set(_loop, ret.second);
     }
-    
-    if(ret.second < 0)
+    else
     {
+        Fatal << "handshaking error" << std::endl;  //握手失败
         return nullptr;
     }
-    
+    TcpConnection::Ptr _conn(new TcpConnection(loop, ret.second)); //返回一个tcpconnection
     handleTimeout(shared_from_this(), timeout);
     return _conn; //返回一个Tcpconnection
 }
@@ -245,19 +239,17 @@ int TcpConnection::handleHandshake(const Ptr &ptr) //握手,connect函数在第�
         {
             //监听到读事件连接成功
             _state = CONNECTED;
+            Info << "connect accept" << std::endl;
             return 0;
         }
     }
-    
+    Warn << "connect error in accept" << std::endl;
     return -1;
 }
 //处理关闭,被动断开链接
 void TcpConnection::handleClose(const Ptr &ptr)
 {
     _state = CLOSED;  //设置状态为close
-    //std::cout << &(*_channel) <<"  --123 " << endl;
-    //把channel从eventloop中删除
-    _loop->delChannel(_channel.get());
     if(_close_cb)
     {
         _close_cb(ptr);
@@ -305,15 +297,26 @@ void TcpConnection::setTimer(Timer::Ptr &timer)
 
 
 
+TcpClient::TcpClient(EventLoop::Ptr loop, TcpConnection::Ptr conn)
+: _loop(loop)
+, _connection(conn)
+{}
 
-TcpConnection::Ptr & TcpClient::start(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout)
+TcpClient::Ptr TcpClient::start(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout)
 {
     TcpConnection::Ptr client(new TcpConnection(loop, 0));
-    _client = std::move(client->connection(loop, host, port, timeout, nullptr));
-    return _client;
+    TcpConnection::Ptr connection = client->connection(loop, host, port, timeout);
+    // if(connection)
+    // {
+    //     //新连接
+    //     TcpClient::Ptr client(new TcpClient(loop, connection));
+    //     return client;
+    // }
+    return nullptr;
+    //_client = std::move(client->connection(loop, host, port, timeout));
+    
 }
 
-TcpConnection::Ptr TcpClient::_client = nullptr;
 
 
 
