@@ -1,5 +1,5 @@
 #include "../net/tcpconnection.h"
-#include "../util/signal.h"
+#include "../signal.h"
 #include <unistd.h>
 #include <thread>
 using namespace tudou;
@@ -16,7 +16,7 @@ int main()
     // serv->setReadCb([](const TcpConnection::Ptr &con){
     //     std::cout << "welocme to read" <<std::endl;
     //     } );
-    Signal::tcpClose(serv); //设置关闭
+    
     serv->start();
     _main_loop->loop();  //开始监听客户端连接
       

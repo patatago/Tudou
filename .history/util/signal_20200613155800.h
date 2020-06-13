@@ -55,11 +55,10 @@ private:
     }
 private:
     static HttpServer::Ptr _http_server;
-    static TudouServer::Ptr _tcp_server;
+    static TudouServer::ptr _tcp_server;
 };
 
 HttpServer::Ptr Signal::_http_server = nullptr;
-TudouServer::Ptr Signal::_tcp_server = nullptr;
 }
 #endif
 

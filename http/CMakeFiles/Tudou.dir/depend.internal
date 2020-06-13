@@ -166,10 +166,10 @@ CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o
 CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o
  /root/Tudou/util/util.cc
  /root/Tudou/util/util.h
-CMakeFiles/Tudou.dir/test_httpserver.cc.o
+CMakeFiles/Tudou.dir/test_tcpserver.cc.o
  /root/Tudou/http/httprequest.h
  /root/Tudou/http/httpserver.h
- /root/Tudou/http/test_httpserver.cc
+ /root/Tudou/http/test_tcpserver.cc
  /root/Tudou/log/blockqueue.h
  /root/Tudou/log/log.h
  /root/Tudou/net/socket.h

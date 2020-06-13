@@ -1,5 +1,4 @@
-#include "../net/tcpconnection.h"
-#include "../util/signal.h"
+#include "../tcpconnection.h"
 #include <unistd.h>
 #include <thread>
 using namespace tudou;
@@ -12,12 +11,20 @@ int main()
     serv->setConnectionCb([](const TcpConnection::Ptr &con){
 			std::cout << "welocme to tudou" <<std::endl;
 	     } );
-
-    // serv->setReadCb([](const TcpConnection::Ptr &con){
-    //     std::cout << "welocme to read" <<std::endl;
-    //     } );
-    Signal::tcpClose(serv); //设置关闭
+    /*
+    serv->setWriteCb([](const TcpConnection::Ptr &con){
+        std::cout << "welocme to write" <<std::endl;
+        } );
+    */
+    
+    serv->setReadCb([](const TcpConnection::Ptr &con){
+        std::cout << "welocme to read" <<std::endl;
+        } );
+    
     serv->start();
+    //thread _thread(func);
+
+    //auto _temp_thread = std::make_shared<thread>([&](){sleep(5); serv->send("hello world");});
     _main_loop->loop();  //开始监听客户端连接
       
 }

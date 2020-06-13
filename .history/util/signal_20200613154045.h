@@ -5,7 +5,6 @@
 #include "util.h"
 #include "../log/log.h"
 #include "../http/httpserver.h"
-#include "../net/tcpconnection.h"
 namespace tudou
 {
 class Signal
@@ -30,11 +29,6 @@ public:
         _http_server = server;
         signal(SIGINT, httpHandler);
     }
-    static void tcpClose(TudouServer::Ptr &server)
-    {
-        _tcp_server = server;
-        signal(SIGINT, tcpHandler);
-    }
 private:
     static void httpHandler(int sig)
     {
@@ -44,22 +38,11 @@ private:
         std::cout << "GoodBye...." << std::endl;
         return ;
     }
-
-    static void tcpHandler(int sig)
-    {
-        EventLoopPool::getInstance().shutdown();
-        Signal::_tcp_server->shutdown();  //HttpServer::Ptr
-        Log::getInstance().shutdown();
-        std::cout << "GoodBye...." << std::endl;
-        return ;
-    }
 private:
     static HttpServer::Ptr _http_server;
-    static TudouServer::Ptr _tcp_server;
 };
 
 HttpServer::Ptr Signal::_http_server = nullptr;
-TudouServer::Ptr Signal::_tcp_server = nullptr;
 }
 #endif
 

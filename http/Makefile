@@ -609,32 +609,32 @@ root/Tudou/util/util.cc.s:
 	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.s
 .PHONY : root/Tudou/util/util.cc.s
 
-test_httpserver.o: test_httpserver.cc.o
+test_tcpserver.o: test_tcpserver.cc.o
 
-.PHONY : test_httpserver.o
+.PHONY : test_tcpserver.o
 
 # target to build an object file
-test_httpserver.cc.o:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_httpserver.cc.o
-.PHONY : test_httpserver.cc.o
+test_tcpserver.cc.o:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_tcpserver.cc.o
+.PHONY : test_tcpserver.cc.o
 
-test_httpserver.i: test_httpserver.cc.i
+test_tcpserver.i: test_tcpserver.cc.i
 
-.PHONY : test_httpserver.i
+.PHONY : test_tcpserver.i
 
 # target to preprocess a source file
-test_httpserver.cc.i:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_httpserver.cc.i
-.PHONY : test_httpserver.cc.i
+test_tcpserver.cc.i:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_tcpserver.cc.i
+.PHONY : test_tcpserver.cc.i
 
-test_httpserver.s: test_httpserver.cc.s
+test_tcpserver.s: test_tcpserver.cc.s
 
-.PHONY : test_httpserver.s
+.PHONY : test_tcpserver.s
 
 # target to generate assembly for a file
-test_httpserver.cc.s:
-	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_httpserver.cc.s
-.PHONY : test_httpserver.cc.s
+test_tcpserver.cc.s:
+	$(MAKE) -f CMakeFiles/Tudou.dir/build.make CMakeFiles/Tudou.dir/test_tcpserver.cc.s
+.PHONY : test_tcpserver.cc.s
 
 # Help Target
 help:
@@ -699,9 +699,9 @@ help:
 	@echo "... root/Tudou/util/util.o"
 	@echo "... root/Tudou/util/util.i"
 	@echo "... root/Tudou/util/util.s"
-	@echo "... test_httpserver.o"
-	@echo "... test_httpserver.i"
-	@echo "... test_httpserver.s"
+	@echo "... test_tcpserver.o"
+	@echo "... test_tcpserver.i"
+	@echo "... test_tcpserver.s"
 .PHONY : help
 
 

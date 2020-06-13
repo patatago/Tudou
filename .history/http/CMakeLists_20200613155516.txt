@@ -9,4 +9,4 @@ add_executable(Tudou ../util/util.cc ../thread/threadgroup.cc
                 ../net/socket.cc ../thread/threadpool.cc  
                 ../poller/eventlooppool.cc  ../net/tcpconnection.cc ../util/buffer.cc
                 ../poller/epoll.cc ../poller/channel.cc  ../poller/event.cc ../poller/pipe.cc  ../thread/taskqueue.cc 
-                 ../util/timer.cc ./httprequest.cc ./httpserver.cc test_tcpserver.cc)
+                 ../util/timer.cc ./httprequest.cc ./httpserver.cc test_tcoserver.cc)

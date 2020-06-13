@@ -38,10 +38,6 @@ utility
 ../log/log.h
 /root/Tudou/log/log.h
 
-/root/Tudou/http/httpserver.cc
-httpserver.h
-/root/Tudou/http/httpserver.h
-
 /root/Tudou/http/httpserver.h
 httprequest.h
 /root/Tudou/http/httprequest.h
@@ -52,22 +48,14 @@ httprequest.h
 ../log/log.h
 /root/Tudou/log/log.h
 
-/root/Tudou/http/test_httpserver.cc
-httpserver.h
-/root/Tudou/http/httpserver.h
-iostream
--
-errno.h
--
-../log/log.h
-/root/Tudou/log/log.h
-signal.h
--
+/root/Tudou/http/test_tcpserver.cc
+../net/tcpconnection.h
+/root/Tudou/net/tcpconnection.h
 ../util/signal.h
 /root/Tudou/util/signal.h
-string.h
+unistd.h
 -
-semaphore.h
+thread
 -
 
 /root/Tudou/log/blockqueue.h
@@ -369,6 +357,8 @@ util.h
 /root/Tudou/log/log.h
 ../http/httpserver.h
 /root/Tudou/http/httpserver.h
+../net/tcpconnection.h
+/root/Tudou/net/tcpconnection.h
 
 /root/Tudou/util/timer.h
 memory

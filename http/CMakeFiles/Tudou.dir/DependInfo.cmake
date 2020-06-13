@@ -22,7 +22,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/root/Tudou/util/error.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/util/error.cc.o"
   "/root/Tudou/util/timer.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/util/timer.cc.o"
   "/root/Tudou/util/util.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/root/Tudou/util/util.cc.o"
-  "/root/Tudou/http/test_httpserver.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/test_httpserver.cc.o"
+  "/root/Tudou/http/test_tcpserver.cc" "/root/Tudou/http/CMakeFiles/Tudou.dir/test_tcpserver.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

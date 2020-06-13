@@ -59,7 +59,7 @@ private:
 };
 
 HttpServer::Ptr Signal::_http_server = nullptr;
-TudouServer::Ptr Signal::_tcp_server = nullptr;
+TcpServer::Ptr Signal::_tcp_server = nullptr;
 }
 #endif
 
