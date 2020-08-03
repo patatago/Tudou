@@ -136,32 +136,6 @@ public:
 	TcpClient(EventLoop::Ptr loop, TcpConnection::Ptr conn);
 	static TcpClient::Ptr start(EventLoop::Ptr loop, const string &host, uint16_t port, int timeout = 10);
 
-
-	// void send(const string &msg)
-	// {
-	// 	_connection->send(msg + "\r\n");
-	// }
-
-	/*
-		心跳包,每5s发送一条"\r\n"的空消息，服务器收到消息会更新定时器
-	void heartBeat()
-	{
-		
-		auto _time = make_shared<Timer>(5, [=]()
-			{
-				_connection->send("\r\n");
-				return true; //重复任务
-			}
-		, _connection);
-
-
-		_connection->setTimer(_time); //绑定定时器到tcpconnection
-
-		TimerManager::getInstance().addTimer(_time); //加入定时器
-	}
-
-	*/
-
 private:
 	TcpConnection::Ptr _connection;
 	EventLoop::Ptr _loop; //loop

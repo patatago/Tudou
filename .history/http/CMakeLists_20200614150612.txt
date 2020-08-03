@@ -1,0 +1,30 @@
+cmake_minimum_required(VERSION 3.14.0-rc2)
+
+project(Tudou)
+
+add_compile_options(-std=c++11)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS}  -pthread -g -march=native")
+
+
+# 添加一个库,默认是静态库,SHARED为动态库
+# add_library(signal SHARED httprequest.cc)
+
+# 设置头文件的搜索路径
+# include_directories()
+
+# 设置库文件输出地址
+# set(LIBRARY_OUTPUT_PATH ${CMAKE_BINARY_DIR})
+ 
+# add_executable(Tudou_s ../util/util.cc ../thread/threadgroup.cc 
+#                 ../util/error.cc
+#                 ../log/log.cc ../log/blockqueue.cc
+#                 ../net/socket.cc ../thread/threadpool.cc  
+#                 ../poller/eventlooppool.cc  ../net/tcpconnection.cc ../util/buffer.cc
+#                 ../poller/epoll.cc ../poller/channel.cc  ../poller/event.cc ../poller/pipe.cc  ../thread/taskqueue.cc 
+#                  ../util/timer.cc ./httprequest.cc ./httpserver.cc test_tcpserver.cc)
+
+
+
+
+

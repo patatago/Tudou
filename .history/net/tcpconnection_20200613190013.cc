@@ -391,6 +391,7 @@ void TcpServer::handleAccept(shared_ptr<TcpServer> _conn) //listen readcb
         con->setState(TcpConnection::CONNECTED); //已链接
         con->getAddress().set(SocketTool::inetNtop(client), SocketTool::ntoh(client.sin_port)); //链接客户端的信息
 
+
         _connections[con->_name] = con; //有一个链接加入
         auto fun = [=]()
                     {
