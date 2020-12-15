@@ -127,7 +127,7 @@ private:
 	SocketAddress _address;
 	
 };
-
+/*
 class TcpClient
 : public enable_shared_from_this<TcpClient>
 {
@@ -160,13 +160,13 @@ public:
 		TimerManager::getInstance().addTimer(_time); //加入定时器
 	}
 
-	*/
+	
 
 private:
 	TcpConnection::Ptr _connection;
 	EventLoop::Ptr _loop; //loop
 };
-
+*/
 
 class TcpServer
 : public enable_shared_from_this<TcpServer>
