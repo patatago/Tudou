@@ -295,7 +295,7 @@ void TcpConnection::setTimer(Timer::Ptr &timer)
 }
 
 
-
+/*
 
 TcpClient::TcpClient(EventLoop::Ptr loop, TcpConnection::Ptr conn)
 : _loop(loop)
@@ -317,7 +317,7 @@ TcpClient::Ptr TcpClient::start(EventLoop::Ptr loop, const string &host, uint16_
     
 }
 
-
+*/
 
 
 
