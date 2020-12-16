@@ -22,11 +22,12 @@ TcpConnection::Ptr TcpConnection::connection(EventLoop::Ptr loop, const string &
     _address.set(host, port);
     _timeout = timeout;
     auto nowTime = getMsec(); //当前时间
-    auto ret = SocketTool::connectTcp(host.c_str(), port); //socket - bind - connect
+    auto ret = SocketTool::connectTcp(host.c_str(), port); //socket - bind - connect,connect成功会EPOLLOUT，失败会EPOLLIN|EPOLLERR
     if(ret.second > 0)
     {
         Info << "connect have return" << std::endl;  //握手成功
         _state = HANDSHAKING;
+        _channel = make_shared<Channel>(loop, ret.second); //更改channel
         set(_loop, ret.second);
     }
     else
@@ -34,7 +35,7 @@ TcpConnection::Ptr TcpConnection::connection(EventLoop::Ptr loop, const string &
         Fatal << "handshaking error" << std::endl;  //握手失败
         return nullptr;
     }
-    TcpConnection::Ptr _conn(new TcpConnection(loop, ret.second)); //返回一个tcpconnection
+    //TcpConnection::Ptr _conn(new TcpConnection(loop, ret.second)); //返回一个tcpconnection
     handleTimeout(shared_from_this(), timeout);
     return _conn; //返回一个Tcpconnection
 }
