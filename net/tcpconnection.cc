@@ -27,7 +27,7 @@ TcpConnection::Ptr TcpConnection::connection(EventLoop::Ptr loop, const string &
     {
         Info << "connect have return" << std::endl;  //握手成功
         _state = HANDSHAKING;
-        _channel = make_shared<Channel>(loop, ret.second); //更改channel
+        _channel = make_shared<Channel>(loop.get(), ret.second); //更改channel
         set(_loop, ret.second);
     }
     else
@@ -37,7 +37,7 @@ TcpConnection::Ptr TcpConnection::connection(EventLoop::Ptr loop, const string &
     }
     //TcpConnection::Ptr _conn(new TcpConnection(loop, ret.second)); //返回一个tcpconnection
     handleTimeout(shared_from_this(), timeout);
-    return _conn; //返回一个Tcpconnection
+    return shared_from_this(); //返回一个Tcpconnection
 }
 
 //设置回调函数
